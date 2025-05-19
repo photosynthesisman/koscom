@@ -1,4 +1,3 @@
-$color--primary: #059ce8;
 .common_guide {
   margin-bottom: 24px;
 }
@@ -213,11 +212,9 @@ $color--primary: #059ce8;
   //   }
   // }
   .btn {
-    background-color: $color--primary;
-    background-position: center;
-    border-radius: 2px;
-    border: none;
-    color: white;
+    background-color: #286bff;
+    background-position: center;    
+    border: none;    
     cursor: pointer;
     font-family: Arial;
     font-size: 30px;
@@ -227,11 +224,11 @@ $color--primary: #059ce8;
     transition: background 0.8s;
 
     &:hover {
-      background: darken($color--primary, 5%) radial-gradient(circle, transparent 1%, darken($color--primary, 5%) 1%) center/15000%;
+      background: darken(#286bff, 5%) radial-gradient(circle, transparent 1%, darken(#286bff, 5%) 1%) center/15000%;
     }
 
     &:active {
-      background-color: darken($color--primary, 10%);
+      background-color: darken(#286bff, 10%);
       background-size: 100%;
       transition: background 0s;
     }
