@@ -1,6 +1,8 @@
+$color--primary: #059ce8;
 .common_guide {
   margin-bottom: 24px;
 }
+// radio
 .radio-wrap {
   .custom-radio {
     display: inline-flex;
@@ -184,6 +186,58 @@
     }
   }
 }
+// button
+.button-wrap {
+  display: flex;
+  gap: 6px;
+  // .btn {
+  //   width: 132px;
+  //   height: 34px;
+  //   font-weight: 600;
+  //   font-size: 14px;
+  //   text-align: center;
+  //   background-color: var(--primary-color);
+  //   background-position: center;
+  //   border: 1px solid var(--border-color);
+  //   transition: background 0.8s;
+  //   &.small {
+  //     height: 28px;
+  //   }
+  //   &.primary {
+  //     border: 1px solid var(--primary-color);
+  //   }
+  //   &:active {
+  //     background-color: darken(#000, 10%);
+  //     background-size: 100%;
+  //     transition: background 0s;
+  //   }
+  // }
+  .btn {
+    background-color: $color--primary;
+    background-position: center;
+    border-radius: 2px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 30px;
+    outline: none;
+    padding: 30px 50px;
+    text-transform: uppercase;
+    transition: background 0.8s;
+
+    &:hover {
+      background: darken($color--primary, 5%) radial-gradient(circle, transparent 1%, darken($color--primary, 5%) 1%) center/15000%;
+    }
+
+    &:active {
+      background-color: darken($color--primary, 10%);
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+}
+
 // dark mode
 .dark-mode {
   .radio-wrap {

@@ -132,6 +132,17 @@ table {
   border-spacing: 0;
 }
 
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
 /* reset css */
 /* custom css */
 :root {
@@ -11515,6 +11526,37 @@ h4 {
 }
 .radio-wrap.unit-type .radio-mark {
   display: none;
+}
+
+.button-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+}
+.button-wrap .btn {
+  background-color: #059ce8;
+  background-position: center;
+  border-radius: 2px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 30px;
+  outline: none;
+  padding: 30px 50px;
+  text-transform: uppercase;
+  -webkit-transition: background 0.8s;
+  transition: background 0.8s;
+}
+.button-wrap .btn:hover {
+  background: #048bcf radial-gradient(circle, transparent 1%, #048bcf 1%) center/15000%;
+}
+.button-wrap .btn:active {
+  background-color: #047ab6;
+  background-size: 100%;
+  -webkit-transition: background 0s;
+  transition: background 0s;
 }
 
 .dark-mode .radio-wrap .custom-radio {
