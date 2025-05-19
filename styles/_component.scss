@@ -1,0 +1,97 @@
+.common_guide {
+  margin-bottom: 24px;
+}
+
+.custom-radio {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 36px;
+  cursor: pointer;
+  input[type="radio"] {
+    display: none;
+    &:checked + .radio-mark {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        opacity: 1;
+      }
+    }
+  }
+  .radio-mark {
+    height: 12px;
+    width: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+    position: relative;
+    transition: border-color 0.75s ease;
+    &::after {
+      content: "";
+      opacity: 0;
+      transition: opacity 0.75s ease;
+    }
+  }
+  .label {
+    position: relative;
+    &.required {
+      padding-right: 8px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 6px;
+        height: 6px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+      }
+    }
+  }
+  span {
+    user-select: none;
+  }
+  &.btn-type {
+    margin-right: 0;
+    width: 25%;
+    input[type="radio"] {
+      & ~ .label {
+        display: block;
+        width: 100%;
+        text-align: center;
+        height: 36px;
+        margin-right: 0;
+        line-height: 36px;
+        box-sizing: border-box;
+        border: 1px solid var(--border-color);
+        border-right-width: 0px;
+        border-radius: 0;
+        background-color: var(--white-bg-color);
+        font-weight: 600;
+        transition: all 0.75s ease;
+      }
+      &:checked {
+        & ~ .label {
+          border: 1px solid var(--primary-color);
+          background-color: var(--main-bg-color);
+          color: var(--primary-color);
+        }
+      }
+    }
+    &:last-of-type {
+      & .label {
+        border-right-width: 1px;
+      }
+    }
+    .radio-mark {
+      display: none;
+    }
+  }
+}
