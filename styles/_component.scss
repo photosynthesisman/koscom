@@ -72,7 +72,7 @@
           height: 36px;
           margin-right: 0;
           line-height: 36px;
-          box-sizing: border-box;
+          background-color: var(--white-bg-color);
           border: 1px solid var(--border-color);
           border-right-width: 0px;
           border-radius: 0;
@@ -145,6 +145,55 @@
       }
       .label {
         display: none;
+      }
+    }
+  }
+  &.unit-type {
+    display: inline-flex;
+    height: 24px;
+    padding: 3px;
+    background-color: var(--sub-bg-color);
+    border-radius: 2px;
+    .custom-radio {
+      margin-right: 2px;
+      &:last-child {
+        margin-right: 0;
+      }
+      input[type="radio"] {
+        & ~ .label {
+          width: 18px;
+          height: 18px;
+          padding: 0 2px;
+          line-height: 18px;
+          text-align: center;
+          font-size: 12px;
+          font-weight: 500;
+          border-radius: 1px;
+          color: var(--white-bg-color);
+          transition: all 0.75s ease;
+        }
+        &:checked {
+          & ~ .label {
+            background-color: var(--btn-sub-color);
+          }
+        }
+      }
+    }
+    .radio-mark {
+      display: none;
+    }
+  }
+}
+// dark mode
+.dark-mode {
+  .radio-wrap {
+    .custom-radio {
+      margin-right: 12px;
+      .radio-mark {
+        background-color: var(--dark-bg-color);
+      }
+      .label {
+        color: var(--white-bg-color);
       }
     }
   }

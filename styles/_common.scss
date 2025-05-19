@@ -85,6 +85,7 @@ video {
   border: 0;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 article,
@@ -137,7 +138,9 @@ table {
   --secondary-color: #6a98ff;
   --main-bg-color: #cbdbff;
   --work-bg-color: #edf3ff;
+  --sub-bg-color: #c7d3eb;
   --white-bg-color: #fff;
+  --dark-bg-color: #222;
 
   --border-color: #dbe4f6;
   --border-color-2: #9ca1ac;
