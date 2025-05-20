@@ -1,4 +1,4 @@
-.common_guide {
+.common-guide {
   margin-bottom: 24px;
 }
 // radio
@@ -472,8 +472,7 @@
   input[type="checkbox"] {
     display: none;
     &:checked + .lbl::after {
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 7 7' fill='none'%3E%3Cpath d='M1 4.05556L2.66667 6L6 1' stroke='%23286BFF'/%3E%3C/svg%3E")
-        center / contain no-repeat;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 7 7' fill='none'%3E%3Cpath d='M1 4.05556L2.66667 6L6 1' stroke='%23286BFF'/%3E%3C/svg%3E") center / contain no-repeat;
       transition: backgound 0.2s;
     }
   }
@@ -495,8 +494,7 @@
       transform: translate(-50%, -50%);
       width: 5px;
       height: 5px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 7 7' fill='none'%3E%3Cpath d='M1 4.05556L2.66667 6L6 1' stroke='%23DBE4F6'/%3E%3C/svg%3E")
-        center / contain no-repeat;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 7 7' fill='none'%3E%3Cpath d='M1 4.05556L2.66667 6L6 1' stroke='%23DBE4F6'/%3E%3C/svg%3E") center / contain no-repeat;
     }
   }
   &.dark {
@@ -508,9 +506,7 @@
         border: 1px solid #dbe4f6;
         &::after {
           content: "";
-          background: var(--dark-bg-color)
-            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 7 7' fill='none'%3E%3Cpath d='M1 4.05556L2.66667 6L6 1' stroke='%23286BFF'/%3E%3C/svg%3E")
-            center / contain no-repeat;
+          background: var(--dark-bg-color) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 7 7' fill='none'%3E%3Cpath d='M1 4.05556L2.66667 6L6 1' stroke='%23286BFF'/%3E%3C/svg%3E") center / contain no-repeat;
         }
       }
       &:disabled {
@@ -525,8 +521,7 @@
           background-color: var(--dark-bg-color-7);
           border: none;
           &::after {
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 7 7' fill='none'%3E%3Cpath d='M1 4.05556L2.66667 6L6 1' stroke='%23DBE4F6'/%3E%3C/svg%3E")
-              center / contain no-repeat;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 7 7' fill='none'%3E%3Cpath d='M1 4.05556L2.66667 6L6 1' stroke='%23DBE4F6'/%3E%3C/svg%3E") center / contain no-repeat;
           }
         }
       }
@@ -642,5 +637,90 @@
     background-color: var(--white-bg-color);
     font-size: 16px;
     font-weight: 600;
+  }
+}
+// table
+.cumstom-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  th,
+  td {
+    height: 36px;
+    padding: 10px 0;
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1;
+  }
+  th {
+    position: relative;
+    background-color: var(--main-bg-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    border: none;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 16px;
+      background-color: var(--secondary-color);
+    }
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+  td {
+    &:first-child {
+      border-left: none;
+    }
+    &:last-child {
+      border-right: none;
+    }
+  }
+  &.dark {
+    table {
+      width: 100%;
+      background-color: var(--dark-bg-color-4);
+      border-collapse: collapse;
+    }
+    th,
+    td {
+      background-color: var(--dark-bg-color-5);
+      border: none;
+      border-bottom: 1px solid #777;
+      color: var(--white-bg-color);
+      &:nth-child(1),
+      &:nth-child(2) {
+        color: var(--disabled-txt-color);
+      }
+      .custom-checkbox {
+        color: var(--disabled-txt-color);
+      }
+    }
+
+    th {
+      font-weight: 500;
+      border-bottom: 1px solid var(--border-color-4);
+      &::after {
+        content: none;
+      }
+    }
+
+    td {
+      background-color: #555;
+      border-bottom: 1px solid var(--border-color-5);
+    }
+
+    th:first-child,
+    td:first-child {
+      text-align: center;
+      width: 40px;
+    }
   }
 }
