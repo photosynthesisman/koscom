@@ -161,10 +161,7 @@ button {
   --dark-bg-color-4: #535353;
   --dark-bg-color-5: #5b5b5b;
   --dark-bg-color-6: #3d3c3c;
-<<<<<<< HEAD
-=======
   --dark-bg-color-7: #8b8b8b;
->>>>>>> e47a00cfc6a4f2fe1fa5258747bcf115c6d7f79b
   --border-color: #dbe4f6;
   --border-color-2: #dde6f7;
   --border-color-3: #dedede;
@@ -11808,41 +11805,23 @@ h4 {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-<<<<<<< HEAD
-=======
   padding-right: 2px;
->>>>>>> e47a00cfc6a4f2fe1fa5258747bcf115c6d7f79b
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid var(--border-color);
   background: var(--white-bg-color);
-<<<<<<< HEAD
-  overflow: hidden;
-}
-.custom-input-spinner input {
-  width: 60px;
-=======
 }
 .custom-input-spinner input {
   width: 60px;
   height: 22px;
->>>>>>> e47a00cfc6a4f2fe1fa5258747bcf115c6d7f79b
   text-align: center;
   border: none;
   outline: none;
   color: var(--sub-txt-color);
-<<<<<<< HEAD
-  font-family: "Noto Sans KR";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-=======
   font-size: 12px;
   font-weight: 500;
   text-align: left;
->>>>>>> e47a00cfc6a4f2fe1fa5258747bcf115c6d7f79b
 }
 .custom-input-spinner input::-webkit-inner-spin-button, .custom-input-spinner input::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -11861,17 +11840,12 @@ h4 {
 .custom-input-spinner .spinner-btn-wrap button {
   width: 10px;
   height: 10px;
-<<<<<<< HEAD
-=======
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.69085 6.5692C7.57032 6.69937 7.3749 6.69937 7.25437 6.5692L5.00347 4.13823L2.75258 6.5692C2.63205 6.69937 2.43663 6.69937 2.31609 6.5692C2.19556 6.43902 2.19556 6.22797 2.31609 6.09779L4.78523 3.43113C4.90576 3.30095 5.10118 3.30095 5.22171 3.43113L7.69085 6.09779C7.81138 6.22797 7.81138 6.43902 7.69085 6.5692Z' fill='%237B828A'/%3E%3C/svg%3E") center/10px no-repeat;
->>>>>>> e47a00cfc6a4f2fe1fa5258747bcf115c6d7f79b
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
 .custom-input-spinner .spinner-btn-wrap button:hover {
   background-color: #ddd;
-<<<<<<< HEAD
-=======
 }
 .custom-input-spinner .spinner-btn-wrap button:last-child {
   -webkit-transform: rotate(180deg);
@@ -12071,5 +12045,4 @@ h4 {
   background-color: var(--white-bg-color);
   font-size: 16px;
   font-weight: 600;
->>>>>>> e47a00cfc6a4f2fe1fa5258747bcf115c6d7f79b
 }/*# sourceMappingURL=main.css.map */
