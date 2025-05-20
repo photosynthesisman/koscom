@@ -144,6 +144,7 @@ button {
 :root {
   --main-txt-color: #333;
   --sub-txt-color: #9ca1ac;
+  --disabled-txt-color: #a8a8a8;
 
   --primary-color: #286bff;
   --secondary-color: #6a98ff;
@@ -152,12 +153,19 @@ button {
   --sub-bg-color: #c7d3eb;
   --white-bg-color: #fff;
   --dark-bg-color: #222;
+  --dark-bg-color-2: #313131;
+  --dark-bg-color-3: #454545;
+  --dark-bg-color-4: #535353;
+  --dark-bg-color-5: #5b5b5b;
+  --dark-bg-color-6: #3d3c3c;
 
   --border-color: #dbe4f6;
-  --border-color-2: #9ca1ac;
-  --border-color-3: #dde6f7;
+  --border-color-2: #dde6f7;
+  --border-color-3: #dedede;
+  --border-color-4: #2d2d2d;
 
   --btn-sub-color: #a8bbe2;
+  --alert-color: #ff6969;
 }
 body {
   font-family: "Noto Sans KR", sans-serif;

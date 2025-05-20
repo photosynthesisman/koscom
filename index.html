@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <div class="common_guide">
@@ -36,7 +36,7 @@
           <span class="label">포트폴리오형(H)</span>
         </label>
       </div>
-      <div class="dark-mode">
+      <div class="radio-wrap dark-mode">
         <div class="radio-wrap">
           <label class="custom-radio">
             <input type="radio" name="option_dark" value="1" checked />
@@ -116,16 +116,103 @@
           <span class="label">A</span>
         </label>
       </div>
+      <div class="radio-wrap btn-type2">
+        <label class="custom-radio">
+          <input type="radio" name="option5" value="1" checked />
+          <span class="radio-mark"></span>
+          <span class="label">Cell Style</span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="option5" value="2" />
+          <span class="radio-mark"></span>
+          <span class="label">Masking 정보설정</span>
+        </label>
+      </div>
     </div>
     <div class="common_guide">
       <h2>Button</h2>
-      <div class="button-wrap">
+      <div class="flex">
         <button type="button" class="btn primary" aria-label="확인">확인</button>
         <button type="button" class="btn" aria-label="취소">취소</button>
+        <button type="button" class="btn dark primary" aria-label="로그인">로그인</button>
+        <button type="button" class="btn dark" aria-label="취소">취소</button>
+        <button type="button" class="btn dark sub-1" aria-label="취소">취소</button>
+        <button type="button" class="btn dark alert w-80" aria-label="Save">Delete</button>
+        <button type="button" class="btn dark clear w-80" aria-label="Save">Clear</button>
+        <button type="button" class="btn dark primary w-80" aria-label="Save">Save</button>
+        <button type="button" class="btn dark w-80" aria-label="Cancel">Cancel</button>
       </div>
-      <div class="button-wrap">
-        <button type="button" class="btn small primary" aria-label="확인">insert</button>
-        <button type="button" class="btn small" aria-label="취소">delete</button>
+      <div class="flex">
+        <button type="button" class="btn dark mini w-160" aria-label="Standard">Standard</button>
+        <button type="button" class="btn dark mini" aria-label="저장">저장</button>
+        <button type="button" class="btn dark mini" aria-label="삭제">삭제</button>
+        <button type="button" class="btn dark mini" aria-label="추가">추가</button>
+      </div>
+      <div class="flex">
+        <button type="button" class="btn small primary" aria-label="insert">insert</button>
+        <button type="button" class="btn small" aria-label="delete">delete</button>
+      </div>
+      <div>
+        <button type="button" class="btn tooltip" aria-label="툴팁보기"></button>
+        <button type="button" class="btn dark move-item up" aria-label="위로 올기기"></button>
+        <button type="button" class="btn dark move-item down" aria-label="아래로 내리기"></button>
+      </div>
+      <div class="select-num-wrap">
+        <button type="button" class="btn select-num plus" aria-label="빼기">-</button>
+        <span>10</span>
+        <button type="button" class="btn select-num minus" aria-label="더하기">+</button>
+      </div>
+    </div>
+    <div class="common_guide">
+      <h2>Combo</h2>
+      <div style="width: 411px">
+        <select id="select1" name="select1" class="custom-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select id="select2" name="select2" class="custom-select" disabled>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select id="select3" name="select3" class="custom-select dark">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select id="select4" name="select4" class="custom-select dark" disabled>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+    </div>
+    <div class="common_guide">
+      <h2>Input</h2>
+      <div style="width: 411px">
+        <input type="text" class="custom-input" placeholder="Changha" />
+      </div>
+      <div style="width: 411px">
+        <input type="text" class="custom-input dark" placeholder="Changha" />
+      </div>
+      <div style="width: 411px">
+        <input type="number" class="custom-input" value="12" />
+      </div>
+      <div class="custom-input-spinner">
+        <input type="number" class="custom-input" value="1" />
+        <div class="spinner-btn-wrap">
+          <button type="button">−</button>
+          <button type="button">＋</button>
+        </div>
       </div>
     </div>
   </body>
