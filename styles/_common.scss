@@ -645,9 +645,6 @@ h4 {
   p {
     flex-shrink: 0;
   }
-  & > .flex {
-    width: 100%;
-  }
 }
 .grid-container {
   display: grid;
