@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="control-attr-wrap">
+      <div class="side-bar">
+        <h3>Settings</h3>
+        <div class="menu-wrap">
+          <ul>
+            <li>
+              <button class="active">General</button>
+            </li>
+            <li><button>Image</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <div class="setting-box">
+          <h4 class="required">Multi Language</h4>
+          <div class="flex mt-24">
+            <div class="flex align-center w-full mr-9">
+              <p class="mr-26">한국어</p>
+              <input type="text" class="custom-input" />
+            </div>
+            <div class="flex align-center w-full">
+              <p class="mr-26">English</p>
+              <input type="text" class="custom-input" />
+            </div>
+          </div>
+          <div class="mt-24">
+            <div class="flex align-center">
+              <h4 class="required mr-32">Caption</h4>
+              <input type="text" class="custom-input" />
+            </div>
+            <div class="indent-2 mt-18">
+              <div class="flex align-center"></div>
+              <div class="flex align-center flex-start">
+                <p class="required w-178">Button Style</p>
+                <select id="select1" name="select1" class="custom-select w-200">
+                  <option value="1">0 - PushDown Button</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <div class="flex align-center flex-start mt-18">
+                <p class="required w-178">Image</p>
+                <div class="flex align-center">
+                  <input type="text" class="custom-input w-170 mr-6" />
+                  <button type="button" class="btn tooltip" aria-label="툴팁보기"></button>
+                </div>
+              </div>
+              <div class="flex align-center flex-start mt-18">
+                <p class="w-178">ImageTextPosition</p>
+                <select id="select2" name="select2" class="custom-select w-200">
+                  <option value="1">5 - Over</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <div class="flex align-center mt-18">
+                <label class="custom-checkbox" for="checkbox2" aria-label="Stretch">
+                  <input type="checkbox" id="checkbox2" name="checkbox2" checked /><i aria-hidden="true" class="lbl"></i>
+                  <span>Stretch</span>
+                </label>
+              </div>
+              <div class="flex align-center mt-18">
+                <p class="mr-16">ToolTipText</p>
+                <label class="custom-checkbox" for="checkbox4" aria-label="Under Cursor">
+                  <input type="checkbox" id="checkbox4" name="checkbox4" checked /><i aria-hidden="true" class="lbl"></i>
+                  <span>Under Cursor</span>
+                </label>
+              </div>
+              <div class="mt-10">
+                <input type="text" class="custom-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-btn-wrap">
+          <button type="button" class="btn primary" aria-label="확인">확인</button>
+          <button type="button" class="btn" aria-label="취소">취소</button>
+          <button type="button" class="btn" aria-label="적용(A)">적용(A)</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

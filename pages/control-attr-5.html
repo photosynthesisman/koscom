@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="control-attr-wrap">
+      <div class="side-bar">
+        <h3>Settings</h3>
+        <div class="menu-wrap">
+          <ul>
+            <li><button>General</button></li>
+            <li><button>Color</button></li>
+            <li><button class="active">Masking</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <div class="setting-box">
+          <div class="radio-wrap">
+            <label class="custom-radio">
+              <input type="radio" name="option" value="1" checked />
+              <span class="radio-mark"></span>
+              <span class="label required">Mask 없음(O)</span>
+            </label>
+          </div>
+          <div class="radio-wrap mt-10">
+            <label class="custom-radio mr-52">
+              <input type="radio" name="option" value="2" />
+              <span class="radio-mark"></span>
+              <span class="label required fw-500">숫자형(N)</span>
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="option" value="3" />
+              <span class="radio-mark"></span>
+              <span class="label fw-500">포트폴리오형(H)</span>
+            </label>
+          </div>
+        </div>
+        <div class="bottom-btn-wrap">
+          <button type="button" class="btn primary" aria-label="확인">확인</button>
+          <button type="button" class="btn" aria-label="취소">취소</button>
+          <button type="button" class="btn" aria-label="적용(A)">적용(A)</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

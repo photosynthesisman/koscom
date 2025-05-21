@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="control-attr-wrap">
+      <div class="side-bar">
+        <h3>Settings</h3>
+        <div class="menu-wrap">
+          <ul>
+            <li><button>General</button></li>
+            <li><button>Color</button></li>
+            <li><button class="active">Masking</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <div class="setting-box">
+          <div class="radio-wrap">
+            <label class="custom-radio mr-42">
+              <input type="radio" name="option1" value="1" />
+              <span class="radio-mark"></span>
+              <span class="label">NUMERAL</span>
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="option1" value="2" checked />
+              <span class="radio-mark"></span>
+              <span class="label">CHARACTER</span>
+            </label>
+          </div>
+          <div class="custom-textfield mt-18">
+            <div class="grid-container ty-2">
+              <div class="flex align-center space-between">
+                <p>Mask</p>
+                <input type="text" class="custom-input w-65" />
+              </div>
+              <label class="custom-checkbox" for="checkbox1" aria-label="Zero Not Display">
+                <input type="checkbox" id="checkbox1" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                <span>Zero Not Display</span>
+              </label>
+            </div>
+            <p class="mt-18">A Mask is representrd with # or 0</p>
+          </div>
+        </div>
+        <div class="bottom-btn-wrap">
+          <button type="button" class="btn primary" aria-label="확인">확인</button>
+          <button type="button" class="btn" aria-label="취소">취소</button>
+          <button type="button" class="btn" aria-label="적용(A)">적용(A)</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="common-guide">
+      <h2>Radio</h2>
+      <div class="radio-wrap">
+        <label class="custom-radio">
+          <input type="radio" name="option" value="1" checked />
+          <span class="radio-mark"></span>
+          <span class="label required">Mask 없음(O)</span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="option" value="2" />
+          <span class="radio-mark"></span>
+          <span class="label fw-500">숫자형(N)</span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="option" value="3" />
+          <span class="radio-mark"></span>
+          <span class="label">포트폴리오형(H)</span>
+        </label>
+      </div>
+      <div class="radio-wrap dark-mode" style="background-color: #333">
+        <div class="radio-wrap">
+          <label class="custom-radio">
+            <input type="radio" name="option_dark" value="1" checked />
+            <span class="radio-mark"></span>
+            <span class="label">Mask 없음(O)</span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="option_dark" value="2" />
+            <span class="radio-mark"></span>
+            <span class="label">숫자형(N)</span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="option_dark" value="3" />
+            <span class="radio-mark"></span>
+            <span class="label">포트폴리오형(H)</span>
+          </label>
+        </div>
+      </div>
+      <div class="radio-wrap btn-type">
+        <label class="custom-radio">
+          <input type="radio" name="option2" value="1" checked />
+          <span class="radio-mark"></span>
+          <span class="label">Mask 없음(O)</span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="option2" value="2" />
+          <span class="radio-mark"></span>
+          <span class="label">숫자형(N)</span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="option2" value="3" />
+          <span class="radio-mark"></span>
+          <span class="label">포트폴리오형(H)</span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="option2" value="4" />
+          <span class="radio-mark"></span>
+          <span class="label">포트폴리오형(H)</span>
+        </label>
+      </div>
+      <div class="radio-wrap align-type">
+        <label class="custom-radio">
+          <input type="radio" name="option3" value="1" checked />
+          <span class="radio-mark txt-left-align"></span>
+          <span class="label">왼쪽 정렬</span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="option3" value="2" />
+          <span class="radio-mark txt-center-align"></span>
+          <span class="label">가운데 정렬</span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="option3" value="3" />
+          <span class="radio-mark txt-right-align"></span>
+          <span class="label">오른쪽 정렬</span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="option3" value="4" />
+          <span class="radio-mark txt-justify-align"></span>
+          <span class="label">균등 정렬</span>
+        </label>
+      </div>
+      <div class="radio-wrap unit-type">
+        <label class="custom-radio">
+          <input type="radio" name="option4" value="1" checked />
+          <span class="radio-mark"></span>
+          <span class="label">PX</span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="option4" value="2" />
+          <span class="radio-mark"></span>
+          <span class="label">%</span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="option4" value="3" />
+          <span class="radio-mark"></span>
+          <span class="label">A</span>
+        </label>
+      </div>
+      <div class="radio-wrap btn-type2">
+        <label class="custom-radio">
+          <input type="radio" name="option5" value="1" checked />
+          <span class="radio-mark"></span>
+          <span class="label">Cell Style</span>
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="option5" value="2" />
+          <span class="radio-mark"></span>
+          <span class="label">Masking 정보설정</span>
+        </label>
+      </div>
+    </div>
+    <div class="common-guide">
+      <h2>Button</h2>
+      <div class="flex">
+        <button type="button" class="btn primary" aria-label="확인">확인</button>
+        <button type="button" class="btn" aria-label="취소">취소</button>
+        <button type="button" class="btn dark primary" aria-label="로그인">로그인</button>
+        <button type="button" class="btn dark" aria-label="취소">취소</button>
+        <button type="button" class="btn dark sub-1" aria-label="취소">취소</button>
+        <button type="button" class="btn dark alert w-80" aria-label="Save">Delete</button>
+        <button type="button" class="btn dark clear w-80" aria-label="Save">Clear</button>
+        <button type="button" class="btn dark primary w-80" aria-label="Save">Save</button>
+        <button type="button" class="btn dark w-80" aria-label="Cancel">Cancel</button>
+      </div>
+      <div class="flex">
+        <button type="button" class="btn dark mini w-160" aria-label="Standard">Standard</button>
+        <button type="button" class="btn dark mini" aria-label="저장">저장</button>
+        <button type="button" class="btn dark mini" aria-label="삭제">삭제</button>
+        <button type="button" class="btn dark mini" aria-label="추가">추가</button>
+      </div>
+      <div class="flex">
+        <button type="button" class="btn small primary" aria-label="insert">insert</button>
+        <button type="button" class="btn small" aria-label="delete">delete</button>
+      </div>
+      <div>
+        <button type="button" class="btn tooltip" aria-label="툴팁보기"></button>
+        <button type="button" class="btn dark move-item up" aria-label="위로 올기기"></button>
+        <button type="button" class="btn dark move-item down" aria-label="아래로 내리기"></button>
+      </div>
+      <div class="select-num-wrap">
+        <button type="button" class="btn select-num plus" aria-label="빼기">-</button>
+        <span>10</span>
+        <button type="button" class="btn select-num minus" aria-label="더하기">+</button>
+      </div>
+    </div>
+    <div class="common-guide">
+      <h2>Combo</h2>
+      <div style="width: 411px">
+        <select id="select1" name="select1" class="custom-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select id="select2" name="select2" class="custom-select" disabled>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select id="select3" name="select3" class="custom-select dark">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select id="select4" name="select4" class="custom-select dark" disabled>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+    </div>
+    <div class="common_guide">
+      <h2>Input</h2>
+      <div style="width: 411px">
+        <input type="text" class="custom-input" placeholder="Changha" />
+      </div>
+      <div style="width: 411px">
+        <input type="text" class="custom-input dark" placeholder="Changha" />
+      </div>
+      <div class="custom-input-spinner">
+        <input type="number" class="custom-input" value="1" />
+        <div class="spinner-btn-wrap">
+          <button type="button"></button>
+          <button type="button"></button>
+        </div>
+      </div>
+    </div>
+    <div class="common-guide">
+      <h2>CheckBox</h2>
+      <div>
+        <label class="custom-checkbox" for="checkbox1" aria-label="반올림">
+          <input type="checkbox" id="checkbox1" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+          <span></span>
+        </label>
+        <label class="custom-checkbox" for="checkbox2" aria-label="반올림">
+          <input type="checkbox" id="checkbox2" name="checkbox2" checked /><i aria-hidden="true" class="lbl"></i>
+          <span>반올림(U)</span>
+        </label>
+      </div>
+      <div style="background-color: #333">
+        <label class="custom-checkbox dark" for="checkbox3" aria-label="Read">
+          <input type="checkbox" id="checkbox3" name="checkbox3" /><i aria-hidden="true" class="lbl"></i>
+          <span>Read</span>
+        </label>
+        <label class="custom-checkbox dark" for="checkbox4" aria-label="method">
+          <input type="checkbox" id="checkbox4" name="checkbox4" checked /><i aria-hidden="true" class="lbl"></i>
+          <span>method</span>
+        </label>
+        <label class="custom-checkbox dark" for="checkbox5" aria-label="ID">
+          <input type="checkbox" id="checkbox5" name="checkbox5" disabled checked /><i aria-hidden="true" class="lbl"></i>
+          <span>ID</span>
+        </label>
+        <label class="custom-checkbox dark" for="checkbox6" aria-label="ID">
+          <input type="checkbox" id="checkbox6" name="checkbox6" disabled /><i aria-hidden="true" class="lbl"></i>
+          <span>ID</span>
+        </label>
+      </div>
+      <div class="toggle-wrapper">
+        <label>
+          <input type="checkbox" id="switch" />
+          <div class="slider">
+            <div class="circle"></div>
+            <span></span>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="common-guide">
+      <h2>TextArea</h2>
+      <textarea id="textarea1" name="textarea1" rows="5" cols="30" class="custom-textarea">
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptatum. Iusto minus eaque quod quos eius, sunt ea id doloremque deleniti, magnam molestiae amet maxime repellat illum culpa saepe dolores!</textarea
+      >
+      <textarea id="textarea2" name="textarea2" rows="5" cols="30" class="custom-textarea dark">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptatum. Iusto minus eaque quod quos eius, sunt ea id doloremque deleniti, magnam molestiae amet maxime repellat illum culpa saepe dolores!
+      </textarea>
+    </div>
+
+    <div class="common-guide">
+      <h2>TextField</h2>
+      <div class="custom-textfield" style="margin-top: 10px">
+        <p class="legend">Request Type</p>
+        <div class="radio-wrap">
+          <label class="custom-radio">
+            <input type="radio" name="option" value="1" checked />
+            <span class="radio-mark"></span>
+            <span class="label required">Mask 없음(O)</span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="option" value="2" />
+            <span class="radio-mark"></span>
+            <span class="label fw-500">숫자형(N)</span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="option" value="3" />
+            <span class="radio-mark"></span>
+            <span class="label">포트폴리오형(H)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="common-guide">
+      <table class="cumstom-table">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Caption</th>
+            <th>한국어</th>
+            <th>English</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Tab2</td>
+            <td>Tab2</td>
+            <td>Tab2</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Tab3</td>
+            <td>Tab3</td>
+            <td>Tab3</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="cumstom-table dark">
+        <colgroup>
+          <col style="width: 36px" />
+          <col style="width: auto" />
+          <col style="width: auto" />
+          <col style="width: auto" />
+          <col style="width: auto" />
+          <col style="width: auto" />
+          <col style="width: auto" />
+          <col style="width: auto" />
+          <col style="width: auto" />
+          <col style="width: auto" />
+          <col style="width: auto" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th></th>
+            <th class="t-left">
+              <label class="custom-checkbox dark" for="checkbox7" aria-label="ScreenID">
+                <input type="checkbox" id="checkbox7" name="checkbox7" /><i aria-hidden="true" class="lbl"></i>
+                <span>ScreenID</span>
+              </label>
+            </th>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Domain</th>
+            <th>Group</th>
+            <th>Modifier</th>
+            <th>Modifier date</th>
+            <th>Creator</th>
+            <th>Creator date</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td class="t-left">
+              <label class="custom-checkbox dark" for="checkbox8" aria-label="ScreenID">
+                <input type="checkbox" id="checkbox8" name="checkbox8" /><i aria-hidden="true" class="lbl"></i>
+                <span>kbai0000</span>
+              </label>
+            </td>
+            <td>30</td>
+            <td>kbai메인</td>
+            <td>KB_AI</td>
+            <td>KBAI</td>
+            <td>kjunho</td>
+            <td>2024-09-30 21:01</td>
+            <td>cjy</td>
+            <td>2024-09-11 08:48</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td class="t-left">
+              <label class="custom-checkbox dark" for="checkbox9" aria-label="ScreenID">
+                <input type="checkbox" id="checkbox9" name="checkbox9" /><i aria-hidden="true" class="lbl"></i>
+                <span>kbai0000</span>
+              </label>
+            </td>
+            <td>30</td>
+            <td>편집팝업</td>
+            <td>KB_AI</td>
+            <td>KBAI</td>
+            <td>nhp</td>
+            <td>2024-11-15 10:10</td>
+            <td>nhp</td>
+            <td>2024-10-14 10:53</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td class="t-left">
+              <label class="custom-checkbox dark" for="checkbox10" aria-label="ScreenID">
+                <input type="checkbox" id="checkbox10" name="checkbox10" /><i aria-hidden="true" class="lbl"></i>
+                <span>kbai0000</span>
+              </label>
+            </td>
+            <td>30</td>
+            <td>중목검색 팝업</td>
+            <td>KB_AI</td>
+            <td>KBAI</td>
+            <td>nhp</td>
+            <td>2024-12-09 20:34</td>
+            <td>nhp</td>
+            <td>2024-11-12 16:19</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td class="t-left">
+              <label class="custom-checkbox dark" for="checkbox11" aria-label="ScreenID">
+                <input type="checkbox" id="checkbox11" name="checkbox11" /><i aria-hidden="true" class="lbl"></i>
+                <span>kbai0000</span>
+              </label>
+            </td>
+            <td>30</td>
+            <td>kbai메인 RE</td>
+            <td>KB_AI</td>
+            <td>KBAI</td>
+            <td>nhp</td>
+            <td>2024-12-12 18:16</td>
+            <td>cjy</td>
+            <td>2024-09-20 09:22</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
