@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spin_컨트롤속성_일반</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="control-attr-wrap">
+      <div class="side-bar">
+        <h3>Settings</h3>
+        <div class="menu-wrap">
+          <ul>
+            <li><button class="active">General</button></li>
+            <li><button>Style</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <div class="setting-box">
+          <div class="flex space-between" style="width: 305px">
+            <div class="flex align-center">
+              <p class="mr-12">Pos</p>
+              <input type="text" class="custom-input w-65" placeholder="0" />
+            </div>
+            <div class="flex align-center">
+              <p class="mr-12">Precision</p>
+              <input type="text" class="custom-input w-65" placeholder="0" />
+            </div>
+          </div>
+          <div class="flex align-center mt-18">
+            <p class="w-105">Item Flag</p>
+            <div style="width: 200px">
+              <select id="select1" name="select1" class="custom-select">
+                <option value="1">0 - NONE</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="flex align-center ml-12">
+              <p class="w-42">Tick</p>
+              <input type="text" class="custom-input w-65" />
+            </div>
+          </div>
+          <div class="flex align-center mt-18">
+            <p class="w-105">Arrow</p>
+            <div style="width: 200px">
+              <select id="select2" name="select2" class="custom-select">
+                <option value="1">VERTICAL</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="flex align-center ml-12">
+              <p class="w-42">Min</p>
+              <input type="text" class="custom-input w-65" />
+            </div>
+          </div>
+          <div class="flex align-center mt-18">
+            <p class="w-105">Base</p>
+            <div style="width: 200px">
+              <select id="select3" name="select3" class="custom-select">
+                <option value="1">NUMBER</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="flex align-center ml-12">
+              <p class="w-42">Max</p>
+              <input type="text" class="custom-input w-65" />
+            </div>
+          </div>
+          <div class="flex align-center mt-18">
+            <p class="w-105">Accel</p>
+            <input type="text" class="custom-input t-left" />
+          </div>
+          <div class="flex align-center mt-18">
+            <label class="custom-checkbox mr-24" for="checkbox2" aria-label="No Thousands">
+              <input type="checkbox" id="checkbox2" name="checkbox2" /><i aria-hidden="true" class="lbl"></i>
+              <span>No Thousands</span>
+            </label>
+            <label class="custom-checkbox mr-24" for="checkbox3" aria-label="Enabled">
+              <input type="checkbox" id="checkbox3" name="checkbox3" checked /><i aria-hidden="true" class="lbl"></i>
+              <span>Enabled</span>
+            </label>
+            <label class="custom-checkbox" for="checkbox4" aria-label="Visible">
+              <input type="checkbox" id="checkbox4" name="checkbox4" checked /><i aria-hidden="true" class="lbl"></i>
+              <span>Visible</span>
+            </label>
+          </div>
+          <div class="mt-18">
+            <p>To set Accel.. Time(sec):Value</p>
+            <p>Ex&#41; 0:1,2:5,4:10 - To 2(sec): 1(Value) Change, 3 form to 4(sec):5, orders 10 change</p>
+          </div>
+        </div>
+        <div class="bottom-btn-wrap">
+          <button type="button" class="btn primary" aria-label="확인">확인</button>
+          <button type="button" class="btn" aria-label="취소">취소</button>
+          <button type="button" class="btn" aria-label="도움말">도움말</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

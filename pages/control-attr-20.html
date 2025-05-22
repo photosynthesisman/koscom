@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio_컨트롤속성_라디오</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="control-attr-wrap">
+      <div class="side-bar">
+        <h3>Settings</h3>
+        <div class="menu-wrap">
+          <ul>
+            <li><button>Group</button></li>
+            <li><button class="active">Radio</button></li>
+            <li><button>Radio Multi Language</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <div class="setting-box">
+          <div class="flex">
+            <div class="flex align-center mr-34">
+              <p class="mr-12">Rows</p>
+              <input type="text" class="custom-input w-64" placeholder="1" />
+            </div>
+            <div class="flex align-center mr-20">
+              <p class="mr-12">Cols</p>
+              <input type="text" class="custom-input w-64" placeholder="2" />
+            </div>
+            <div class="flex align-center">
+              <p class="mr-12">Display Style</p>
+              <div class="w-180">
+                <select id="select1" name="select1" class="custom-select">
+                  <option value="1">0 - Rounded</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="flex space-between mt-18">
+            <div class="flex align-center mr-34">
+              <p class="mr-12">Rows</p>
+              <div class="custom-input-spinner">
+                <input type="number" class="custom-input" value="1" />
+                <div class="spinner-btn-wrap">
+                  <button type="button"></button>
+                  <button type="button"></button>
+                </div>
+              </div>
+            </div>
+            <div class="flex align-center">
+              <p class="mr-20">Fore Color</p>
+              <div class="w-180">
+                <select id="select2" name="select2" class="custom-select">
+                  <option value="1">입력박스 글꼴</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="flex space-between mt-18">
+            <div class="flex align-center">
+              <p class="mr-20">Font</p>
+              <div class="w-180">
+                <select id="select3" name="select3" class="custom-select">
+                  <option value="1">굴림9</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex align-center">
+              <p class="mr-20">Select Fore Color</p>
+              <div class="w-180">
+                <select id="select4" name="select4" class="custom-select">
+                  <option value="1">입력박스 글꼴</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="flex align-center mt-18">
+            <label class="custom-checkbox mr-28" for="checkbox2" aria-label="Enabled">
+              <input type="checkbox" id="checkbox2" name="checkbox2" disabled /><i aria-hidden="true" class="lbl"></i>
+              <span>Auto Valign</span>
+            </label>
+            <label class="custom-checkbox" for="checkbox3" aria-label="Visible">
+              <input type="checkbox" id="checkbox3" name="checkbox3" disabled /><i aria-hidden="true" class="lbl"></i>
+              <span>Auto Resize Column Width</span>
+            </label>
+          </div>
+          <table class="custom-table mt-18">
+            <thead>
+              <tr>
+                <th>Che</th>
+                <th>Caption</th>
+                <th>Row in</th>
+                <th>OnVa</th>
+                <th>Enabl</th>
+                <th>Visibl</th>
+                <th>Top</th>
+                <th>Botto</th>
+                <th>Left</th>
+                <th>Righ</th>
+                <th>Wid</th>
+                <th>Her</th>
+                <th>Tooltip</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <label class="custom-checkbox" for="checkbox4" aria-label="ScreenID">
+                    <input type="checkbox" id="checkbox4" name="checkbox4" checked /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </td>
+                <td>Radio1</td>
+                <td>1</td>
+                <td></td>
+                <td>
+                  <label class="custom-checkbox" for="checkbox5" aria-label="ScreenID">
+                    <input type="checkbox" id="checkbox5" name="checkbox5" checked /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </td>
+                <td>
+                  <label class="custom-checkbox" for="checkbox6" aria-label="ScreenID">
+                    <input type="checkbox" id="checkbox6" name="checkbox6" checked /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>7</td>
+                <td>50</td>
+                <td>20</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="custom-checkbox" for="checkbox7" aria-label="ScreenID">
+                    <input type="checkbox" id="checkbox7" name="checkbox7" checked /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </td>
+                <td>Radio2</td>
+                <td>1</td>
+                <td></td>
+                <td>
+                  <label class="custom-checkbox" for="checkbox8" aria-label="ScreenID">
+                    <input type="checkbox" id="checkbox8" name="checkbox8" checked /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </td>
+                <td>
+                  <label class="custom-checkbox" for="checkbox9" aria-label="ScreenID">
+                    <input type="checkbox" id="checkbox9" name="checkbox9" checked /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>7</td>
+                <td>50</td>
+                <td>20</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="flex justify-end mt-24">
+            <button type="button" class="btn small" aria-label="insert">insert</button>
+            <button type="button" class="btn small" aria-label="delete">delete</button>
+            <button type="button" class="btn small" aria-label="add">add</button>
+          </div>
+        </div>
+        <div class="bottom-btn-wrap">
+          <button type="button" class="btn primary" aria-label="확인">확인</button>
+          <button type="button" class="btn" aria-label="취소">취소</button>
+          <button type="button" class="btn" aria-label="도움말">도움말</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

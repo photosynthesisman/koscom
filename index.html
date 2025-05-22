@@ -11,101 +11,149 @@
   </head>
   <body>
     <h2>publist</h2>
-    <table class="cumstom-table dark mt-24">
-      <colgroup>
-        <col style="width: 64px" />
-        <col style="width: 20%" />
-        <col style="width: auto" />
-        <col style="width: 20%" />
-      </colgroup>
-      <thead>
-        <tr>
-          <th>No</th>
-          <th>구분</th>
-          <th>바로가기</th>
-          <th>비고</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>퍼블 가이드</td>
-          <td class="t-left"><button onclick="loadGuide('./pages/guide.html')">공통 가이드</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td rowspan="100">컨트롤 속성창</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-1.html')">Tab-컨트롤속성_일반</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-2.html')">Static-컨트롤속성_일반</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-3.html')">Lable-컨트롤속성_일반</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-4.html', 'type-2')">Lable-컨트롤속성_마스킹</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-5.html', 'type-2')">Lable-컨트롤속성_마스킹</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-6.html')">Button-컨트롤속성_일반</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-7.html')">Button-컨트롤속성_일반</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-8.html')">Button-컨트롤속성_일반</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-9.html')">MaskEdit-컨트롤속성_일반</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-10.html')">Maskedit-컨트롤속성_마스킹_NUMERAL</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-11.html')">Maskedit-컨트롤속성_마스킹_CHARACTER</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-12.html')">EditBox-컨트롤속성_일반</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-13.html')">Combo-컨트롤속성_일반</button></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-14.html')">Combo-컨트롤속성_인풋</button></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="mt-24" style="height: calc(100vh - 56px); overflow-y: scroll">
+      <table class="custom-table dark">
+        <colgroup>
+          <col style="width: 64px" />
+          <col style="width: 20%" />
+          <col style="width: auto" />
+          <col style="width: 20%" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>구분</th>
+            <th>바로가기</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>퍼블 가이드</td>
+            <td class="t-left"><button onclick="loadGuide('./pages/guide.html')">공통 가이드</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td rowspan="100">컨트롤 속성창</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-1.html')">Tab_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-2.html')">Static_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-3.html')">Lable_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-4.html', 'type-2')">Lable_컨트롤속성_마스킹</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-5.html', 'type-2')">Lable_컨트롤속성_마스킹</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-6.html')">Button_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-7.html')">Button_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-8.html')">Button_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-9.html')">MaskEdit_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-10.html')">Maskedit_컨트롤속성_마스킹_NUMERAL</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-11.html')">Maskedit_컨트롤속성_마스킹_CHARACTER</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-12.html')">EditBox_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-13.html')">Combo_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-14.html')">Combo_컨트롤속성_인풋</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-15.html')">JMCombo_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-16.html')">PFCombo_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-17.html')">GroupBox_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-18.html')">Check_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-19.html')">Radio_컨트롤속성_그룹</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-20.html')">Radio_컨트롤속성_라디오</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-21.html')">Radio_컨트롤속성_라디오멀티랭귀지</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-22.html')">Spin_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-23.html', 'type-3')">Table_컨트롤속성_일반</button></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="modal control-attr">
       <div class="modal-content">
         <iframe id="control-attr"></iframe>
@@ -124,18 +172,28 @@
       function loadControlAttr(page, type) {
         const modal = document.querySelector(".control-attr");
         modal.classList.remove("type-2");
+        modal.classList.remove("type-3");
         if (type) {
           modal.classList.add(type);
         }
         document.getElementById("control-attr").src = page;
         modal.style.display = "flex";
       }
-      window.addEventListener("click", function (event) {
-        if (event.target.classList.contains("modal")) {
-          event.target.style.display = "none";
+      function closeModal() {
+        window.addEventListener("click", function (event) {
+          if (event.target.classList.contains("modal")) {
+            event.target.style.display = "none";
+            document.getElementById("control-attr").src = "";
+          }
+        });
+      }
+      window.addEventListener("message", function (event) {
+        if (event.data === "close-modal") {
+          document.querySelector(".modal.control-attr").style.display = "none";
           document.getElementById("control-attr").src = "";
         }
       });
+      closeModal();
     </script>
   </body>
 </html>
