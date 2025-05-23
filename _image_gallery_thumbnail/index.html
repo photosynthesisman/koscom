@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이미지 비율 유지 + 작은 이미지는 확대 없이 중앙 정렬</title>
+  <style>
+    body { font-family: sans-serif; }
+    .controls {
+      margin-bottom: 20px;
+    }
+    .controls input, .controls select {
+      padding: 6px;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .scrollable-gallery {
+      max-height: 360px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 130px;
+    }
+    .thumbnail-wrapper {
+      width: 120px;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8f8f8;
+      border: 1px solid #aaa;
+      overflow: hidden;
+    }
+    .thumbnail-wrapper img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+    .filename {
+      margin-top: 4px;
+      font-size: 12px;
+      color: #333;
+      word-break: break-all;
+      text-align: center;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .modal img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+  </style>
+</head>
+<body>
+<h2>📁 고정 썸네일 + 작은 이미지 원본 크기로 중앙 정렬</h2>
+
+<div class="controls">
+  🔍 검색: <input type="text" id="searchInput" placeholder="파일명 입력">
+  📂 유형 필터: 
+  <select id="categoryFilter">
+    <option value="all">전체</option>
+    <option value="png_set">PNG</option>
+    <option value="svg_set">SVG</option>
+  </select>
+</div>
+<div class="section" data-folder="png_set">
+  <div class="section-title">PNG 이미지</div>
+  <div class="scrollable-gallery"><div class="gallery">
+    <div class="item" data-filename="image01.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image01.png" alt="image01.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image01.png</div>
+    </div>
+    <div class="item" data-filename="image02.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image02.png" alt="image02.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image02.png</div>
+    </div>
+    <div class="item" data-filename="image03.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image03.png" alt="image03.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image03.png</div>
+    </div>
+    <div class="item" data-filename="image04.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image04.png" alt="image04.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image04.png</div>
+    </div>
+    <div class="item" data-filename="image05.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image05.png" alt="image05.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image05.png</div>
+    </div>
+    <div class="item" data-filename="image06.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image06.png" alt="image06.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image06.png</div>
+    </div>
+    <div class="item" data-filename="image07.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image07.png" alt="image07.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image07.png</div>
+    </div>
+    <div class="item" data-filename="image08.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image08.png" alt="image08.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image08.png</div>
+    </div>
+    <div class="item" data-filename="image09.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image09.png" alt="image09.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image09.png</div>
+    </div>
+    <div class="item" data-filename="image10.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image10.png" alt="image10.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image10.png</div>
+    </div>
+    <div class="item" data-filename="image11.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image11.png" alt="image11.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image11.png</div>
+    </div>
+    <div class="item" data-filename="image12.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image12.png" alt="image12.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image12.png</div>
+    </div>
+    <div class="item" data-filename="image13.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image13.png" alt="image13.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image13.png</div>
+    </div>
+    <div class="item" data-filename="image14.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image14.png" alt="image14.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image14.png</div>
+    </div>
+    <div class="item" data-filename="image15.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image15.png" alt="image15.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image15.png</div>
+    </div>
+    <div class="item" data-filename="image16.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image16.png" alt="image16.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image16.png</div>
+    </div>
+    <div class="item" data-filename="image17.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image17.png" alt="image17.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image17.png</div>
+    </div>
+    <div class="item" data-filename="image18.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image18.png" alt="image18.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image18.png</div>
+    </div>
+    <div class="item" data-filename="image19.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image19.png" alt="image19.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image19.png</div>
+    </div>
+    <div class="item" data-filename="image20.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image20.png" alt="image20.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image20.png</div>
+    </div>
+    <div class="item" data-filename="image21.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image21.png" alt="image21.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image21.png</div>
+    </div>
+    <div class="item" data-filename="image22.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image22.png" alt="image22.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image22.png</div>
+    </div>
+    <div class="item" data-filename="image23.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image23.png" alt="image23.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image23.png</div>
+    </div>
+    <div class="item" data-filename="image24.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image24.png" alt="image24.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image24.png</div>
+    </div>
+    <div class="item" data-filename="image25.png" data-folder="png_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/png_set/image25.png" alt="image25.png" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image25.png</div>
+    </div>
+  </div></div>
+</div>
+<div class="section" data-folder="svg_set">
+  <div class="section-title">SVG 이미지</div>
+  <div class="scrollable-gallery"><div class="gallery">
+    <div class="item" data-filename="image01.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image01.svg" alt="image01.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image01.svg</div>
+    </div>
+    <div class="item" data-filename="image02.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image02.svg" alt="image02.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image02.svg</div>
+    </div>
+    <div class="item" data-filename="image03.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image03.svg" alt="image03.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image03.svg</div>
+    </div>
+    <div class="item" data-filename="image04.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image04.svg" alt="image04.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image04.svg</div>
+    </div>
+    <div class="item" data-filename="image05.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image05.svg" alt="image05.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image05.svg</div>
+    </div>
+    <div class="item" data-filename="image06.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image06.svg" alt="image06.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image06.svg</div>
+    </div>
+    <div class="item" data-filename="image07.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image07.svg" alt="image07.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image07.svg</div>
+    </div>
+    <div class="item" data-filename="image08.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image08.svg" alt="image08.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image08.svg</div>
+    </div>
+    <div class="item" data-filename="image09.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image09.svg" alt="image09.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image09.svg</div>
+    </div>
+    <div class="item" data-filename="image10.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image10.svg" alt="image10.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image10.svg</div>
+    </div>
+    <div class="item" data-filename="image11.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image11.svg" alt="image11.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image11.svg</div>
+    </div>
+    <div class="item" data-filename="image12.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image12.svg" alt="image12.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image12.svg</div>
+    </div>
+    <div class="item" data-filename="image13.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image13.svg" alt="image13.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image13.svg</div>
+    </div>
+    <div class="item" data-filename="image14.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image14.svg" alt="image14.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image14.svg</div>
+    </div>
+    <div class="item" data-filename="image15.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image15.svg" alt="image15.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image15.svg</div>
+    </div>
+    <div class="item" data-filename="image16.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image16.svg" alt="image16.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image16.svg</div>
+    </div>
+    <div class="item" data-filename="image17.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image17.svg" alt="image17.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image17.svg</div>
+    </div>
+    <div class="item" data-filename="image18.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image18.svg" alt="image18.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image18.svg</div>
+    </div>
+    <div class="item" data-filename="image19.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image19.svg" alt="image19.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image19.svg</div>
+    </div>
+    <div class="item" data-filename="image20.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image20.svg" alt="image20.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image20.svg</div>
+    </div>
+    <div class="item" data-filename="image21.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image21.svg" alt="image21.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image21.svg</div>
+    </div>
+    <div class="item" data-filename="image22.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image22.svg" alt="image22.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image22.svg</div>
+    </div>
+    <div class="item" data-filename="image23.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image23.svg" alt="image23.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image23.svg</div>
+    </div>
+    <div class="item" data-filename="image24.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image24.svg" alt="image24.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image24.svg</div>
+    </div>
+    <div class="item" data-filename="image25.svg" data-folder="svg_set">
+      <div class="thumbnail-wrapper">
+        <img src="images/svg_set/image25.svg" alt="image25.svg" onclick="openModal(this.src)">
+      </div>
+      <div class="filename">image25.svg</div>
+    </div>
+  </div></div>
+</div>
+
+<div class="modal" id="imageModal" onclick="closeModal()">
+  <img id="modalImage" src="">
+</div>
+
+<script>
+  function openModal(src) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modalImg.src = src;
+    modal.style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+
+  document.getElementById("searchInput").addEventListener("input", filterItems);
+  document.getElementById("categoryFilter").addEventListener("change", filterItems);
+
+  function filterItems() {
+    const keyword = document.getElementById("searchInput").value.toLowerCase();
+    const category = document.getElementById("categoryFilter").value;
+    const items = document.querySelectorAll(".item");
+
+    items.forEach(item => {
+      const filename = item.dataset.filename.toLowerCase();
+      const folder = item.dataset.folder;
+      const matchKeyword = filename.includes(keyword);
+      const matchCategory = (category === "all" || category === folder);
+
+      item.style.display = (matchKeyword && matchCategory) ? "flex" : "none";
+    });
+  }
+</script>
+</body>
+</html>
