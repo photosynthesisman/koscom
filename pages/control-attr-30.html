@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory_컨트롤속성_메모리인포</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="control-attr-wrap">
+      <div class="side-bar">
+        <h3>Settings</h3>
+        <div class="menu-wrap">
+          <ul>
+            <li><button>General</button></li>
+            <li><button class="active">Memory Info</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <div class="setting-box">
+          <div class="flex align-center justify-end">
+            <p class="mr-32">메모리개수</p>
+            <div class="select-num-wrap">
+              <button type="button" class="btn select-num plus" aria-label="빼기">-</button>
+              <span>10</span>
+              <button type="button" class="btn select-num minus" aria-label="더하기">+</button>
+            </div>
+          </div>
+          <h4 class="mt-16">Caption</h4>
+          <table class="custom-table layout-fixed mt-16">
+            <colgroup>
+              <col />
+              <col />
+              <col />
+              <col />
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Key</th>
+                <th>FID</th>
+                <th>Data</th>
+                <th>통신</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td>
+                  <select id="select1" name="select1" class="custom-select in-table">
+                    <option value="1">Normal</option>
+                    <option value="2">True</option>
+                  </select>
+                </td>
+                <td>
+                  <label class="custom-checkbox" for="checkbox1" aria-label="">
+                    <input type="checkbox" id="checkbox1" name="checkbox1" checked /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td>Normal</td>
+                <td>
+                  <label class="custom-checkbox" for="checkbox2" aria-label="">
+                    <input type="checkbox" id="checkbox2" name="checkbox2" checked /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td>현재 값의 합</td>
+                <td>
+                  <label class="custom-checkbox" for="checkbox3" aria-label="">
+                    <input type="checkbox" id="checkbox3" name="checkbox3" checked /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td>Normal</td>
+                <td>
+                  <label class="custom-checkbox" for="checkbox4" aria-label="">
+                    <input type="checkbox" id="checkbox4" name="checkbox4" checked /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td>Normal</td>
+                <td>
+                  <label class="custom-checkbox" for="checkbox5" aria-label="">
+                    <input type="checkbox" id="checkbox5" name="checkbox5" checked /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="bottom-btn-wrap">
+          <button type="button" class="btn primary" aria-label="확인">확인</button>
+          <button type="button" class="btn" aria-label="취소">취소</button>
+          <button type="button" class="btn" aria-label="도움말">도움말</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

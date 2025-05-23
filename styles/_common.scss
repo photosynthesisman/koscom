@@ -86,6 +86,7 @@ video {
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 article,
@@ -299,6 +300,9 @@ body {
 }
 .flex-row {
   flex-direction: row !important;
+}
+.flex-column {
+  flex-direction: column !important;
 }
 .overflow-inherit {
   overflow: inherit !important;
