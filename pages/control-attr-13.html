@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MaskEdit_컨트롤속성_일반</title>
+    <title>Combo_컨트롤속성_일반</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
@@ -16,8 +16,8 @@
         <div class="menu-wrap">
           <ul>
             <li><button class="active">General</button></li>
+            <li><button>Input</button></li>
             <li><button>Color</button></li>
-            <li><button>Masking</button></li>
           </ul>
         </div>
       </div>
@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="flex align-center mt-18">
-            <p class="w-108">FID Flag</p>
+            <p class="required w-108">FID Flag</p>
             <select id="select1" name="select1" class="custom-select w-170">
               <option value="1">0 - 입력용</option>
               <option value="2">2</option>
@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="flex align-center mt-18">
-            <p class="w-108">FID Flag</p>
+            <p class="w-108">VAlign</p>
             <select id="select2" name="select2" class="custom-select w-170">
               <option value="1">1 - MIDDLE</option>
               <option value="2">2</option>
@@ -88,6 +88,41 @@
               <input type="checkbox" id="checkbox5" name="checkbox5" checked /><i aria-hidden="true" class="lbl"></i>
               <span>AutoHScroll</span>
             </label>
+          </div>
+          <div class="mt-28">
+            <label class="custom-checkbox" for="checkbox6" aria-label="Link Combo Type">
+              <input type="checkbox" id="checkbox6" name="checkbox6" /><i aria-hidden="true" class="lbl"></i>
+              <span>Link Combo Type</span>
+            </label>
+          </div>
+          <div class="custom-textfield mt-20">
+            <p class="legend">Style</p>
+            <div class="radio-wrap">
+              <label class="custom-radio mr-36">
+                <input type="radio" name="option" value="1" />
+                <span class="radio-mark"></span>
+                <span class="label">DropDown</span>
+              </label>
+              <label class="custom-radio mr-36">
+                <input type="radio" name="option" value="2" checked />
+                <span class="radio-mark"></span>
+                <span class="label">DropList</span> </label
+              ><label class="custom-radio">
+                <input type="radio" name="option" value="3" />
+                <span class="radio-mark"></span>
+                <span class="label">CheckBox</span>
+              </label>
+            </div>
+          </div>
+          <div class="flex align-center mt-16">
+            <p class="w-108">Round Option</p>
+            <select id="select4" name="select4" class="custom-select w-170">
+              <option value="1">0 - All</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
           </div>
         </div>
         <div class="bottom-btn-wrap">

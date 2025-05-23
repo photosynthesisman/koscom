@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PFCombo_컨트롤속성_일반</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="control-attr-wrap">
+      <div class="side-bar">
+        <h3>Settings</h3>
+        <div class="menu-wrap">
+          <ul>
+            <li><button class="active">General</button></li>
+            <li><button>Color</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <div class="setting-box">
+          <div class="flex align-center">
+            <p class="w-122">Appearance</p>
+            <select id="select2" name="select2" class="custom-select w-170">
+              <option value="1">1 - CONCAVE</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="flex align-center mt-18">
+            <p class="w-122">List Row Count</p>
+            <div class="flex align-center">
+              <input type="text" class="custom-input w-170" placeholder="5" />
+            </div>
+          </div>
+          <div class="flex align-center mt-18">
+            <p class="w-122">Search Count</p>
+            <div class="flex align-center">
+              <input type="text" class="custom-input w-170" placeholder="10" />
+            </div>
+          </div>
+          <div class="mt-18">
+            <label class="custom-checkbox mr-32" for="checkbox2" aria-label="Visible">
+              <input type="checkbox" id="checkbox2" name="checkbox2" checked /><i aria-hidden="true" class="lbl"></i>
+              <span>Visible</span>
+            </label>
+            <label class="custom-checkbox mr-32" for="checkbox1" aria-label="Enableed">
+              <input type="checkbox" id="checkbox1" name="checkbox1" checked /><i aria-hidden="true" class="lbl"></i>
+              <span>Enableed</span>
+            </label>
+          </div>
+          <div class="custom-textfield mt-32">
+            <p class="legend">Request Type</p>
+            <div class="radio-wrap">
+              <label class="custom-radio mr-44">
+                <input type="radio" name="option" value="1" checked />
+                <span class="radio-mark"></span>
+                <span class="label">Portfolio</span>
+              </label>
+              <label class="custom-radio">
+                <input type="radio" name="option" value="2" />
+                <span class="radio-mark"></span>
+                <span class="label">Index</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-btn-wrap">
+          <button type="button" class="btn primary" aria-label="확인">확인</button>
+          <button type="button" class="btn" aria-label="취소">취소</button>
+          <button type="button" class="btn" aria-label="도움말">도움말</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

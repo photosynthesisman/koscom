@@ -149,6 +149,7 @@
         <button type="button" class="btn tooltip" aria-label="툴팁보기"></button>
         <button type="button" class="btn dark move-item up" aria-label="위로 올기기"></button>
         <button type="button" class="btn dark move-item down" aria-label="아래로 내리기"></button>
+        <button type="button" class="btn input-attr" aria-label=""></button>
       </div>
       <div class="select-num-wrap">
         <button type="button" class="btn select-num plus" aria-label="빼기">-</button>
@@ -216,10 +217,14 @@
           <input type="checkbox" id="checkbox2" name="checkbox2" checked /><i aria-hidden="true" class="lbl"></i>
           <span>반올림(U)</span>
         </label>
+        <label class="custom-checkbox" for="checkbox3" aria-label="반올림">
+          <input type="checkbox" id="checkbox3" name="checkbox3" disabled /><i aria-hidden="true" class="lbl"></i>
+          <span></span>
+        </label>
       </div>
       <div style="background-color: #333">
         <label class="custom-checkbox dark" for="checkbox3" aria-label="Read">
-          <input type="checkbox" id="checkbox3" name="checkbox3" /><i aria-hidden="true" class="lbl"></i>
+          <input type="checkbox" id="checkbox7" name="checkbox7" /><i aria-hidden="true" class="lbl"></i>
           <span>Read</span>
         </label>
         <label class="custom-checkbox dark" for="checkbox4" aria-label="method">
@@ -244,6 +249,21 @@
           </div>
         </label>
       </div>
+      <label class="custom-checkbox border-line top" for="checkbox13" aria-label="border-top">
+        <input type="checkbox" id="checkbox13" name="checkbox13" /><i aria-hidden="true" class="lbl"></i>
+      </label>
+      <label class="custom-checkbox border-line right" for="checkbox14" aria-label="border-right">
+        <input type="checkbox" id="checkbox14" name="checkbox14" /><i aria-hidden="true" class="lbl"></i>
+      </label>
+      <label class="custom-checkbox border-line bottom" for="checkbox15" aria-label="border-bottom">
+        <input type="checkbox" id="checkbox15" name="checkbox15" /><i aria-hidden="true" class="lbl"></i>
+      </label>
+      <label class="custom-checkbox border-line left" for="checkbox16" aria-label="border-left">
+        <input type="checkbox" id="checkbox16" name="checkbox16" /><i aria-hidden="true" class="lbl"></i>
+      </label>
+      <label class="custom-checkbox border-line all" for="checkbox17" aria-label="border-all">
+        <input type="checkbox" id="checkbox17" name="checkbox17" /><i aria-hidden="true" class="lbl"></i>
+      </label>
     </div>
 
     <div class="common-guide">
@@ -280,7 +300,7 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptatum. Iusto
       </div>
     </div>
     <div class="common-guide">
-      <table class="cumstom-table">
+      <table class="custom-table">
         <thead>
           <tr>
             <th>Index</th>
@@ -304,7 +324,7 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptatum. Iusto
           </tr>
         </tbody>
       </table>
-      <table class="cumstom-table dark">
+      <table class="custom-table dark">
         <colgroup>
           <col style="width: 36px" />
           <col style="width: auto" />
@@ -322,8 +342,8 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptatum. Iusto
           <tr>
             <th></th>
             <th class="t-left">
-              <label class="custom-checkbox dark" for="checkbox7" aria-label="ScreenID">
-                <input type="checkbox" id="checkbox7" name="checkbox7" /><i aria-hidden="true" class="lbl"></i>
+              <label class="custom-checkbox dark" for="checkbox12" aria-label="ScreenID">
+                <input type="checkbox" id="checkbox12" name="checkbox12" /><i aria-hidden="true" class="lbl"></i>
                 <span>ScreenID</span>
               </label>
             </th>

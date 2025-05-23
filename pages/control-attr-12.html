@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MaskEdit_컨트롤속성_일반</title>
+    <title>EditBox_컨트롤속성_일반</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
@@ -17,7 +17,6 @@
           <ul>
             <li><button class="active">General</button></li>
             <li><button>Color</button></li>
-            <li><button>Masking</button></li>
           </ul>
         </div>
       </div>
@@ -30,7 +29,7 @@
             </div>
           </div>
           <div class="flex align-center mt-18">
-            <p class="w-108">FID Flag</p>
+            <p class="required w-108">FID Flag</p>
             <select id="select1" name="select1" class="custom-select w-170">
               <option value="1">0 - 입력용</option>
               <option value="2">2</option>
@@ -39,22 +38,7 @@
               <option value="5">5</option>
             </select>
           </div>
-          <div class="flex align-center mt-18">
-            <p class="required w-108">MaxLength</p>
-            <div class="flex align-center">
-              <input type="text" class="custom-input w-170" placeholder="0" />
-            </div>
-          </div>
-          <div class="flex align-center mt-18">
-            <p class="w-108">FID Flag</p>
-            <select id="select2" name="select2" class="custom-select w-170">
-              <option value="1">1 - MIDDLE</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
+
           <div class="flex align-center mt-18">
             <p class="w-108">Appearance</p>
             <select id="select3" name="select3" class="custom-select w-170">
@@ -74,20 +58,14 @@
               <input type="checkbox" id="checkbox2" name="checkbox2" checked /><i aria-hidden="true" class="lbl"></i>
               <span>Visible</span>
             </label>
-            <label class="custom-checkbox" for="checkbox3" aria-label="Password">
+            <label class="custom-checkbox" for="checkbox3" aria-label="ReadOnly">
               <input type="checkbox" id="checkbox3" name="checkbox3" checked /><i aria-hidden="true" class="lbl"></i>
-              <span>Password</span>
-            </label>
-          </div>
-          <div class="mt-18">
-            <label class="custom-checkbox mr-32" for="checkbox4" aria-label="ReadOnly">
-              <input type="checkbox" id="checkbox4" name="checkbox4" disabled /><i aria-hidden="true" class="lbl"></i>
               <span>ReadOnly</span>
             </label>
-            <label class="custom-checkbox" for="checkbox5" aria-label="AutoHScroll">
-              <input type="checkbox" id="checkbox5" name="checkbox5" checked /><i aria-hidden="true" class="lbl"></i>
-              <span>AutoHScroll</span>
-            </label>
+          </div>
+          <div class="mt-32">
+            <h4>Caption</h4>
+            <textarea id="textarea1" name="textarea1" rows="5" cols="30" class="custom-textarea mt-12"></textarea>
           </div>
         </div>
         <div class="bottom-btn-wrap">

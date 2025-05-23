@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combo_컨트롤속성_인풋</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="control-attr-wrap">
+      <div class="side-bar">
+        <h3>Settings</h3>
+        <div class="menu-wrap">
+          <ul>
+            <li><button>General</button></li>
+            <li><button class="active">Input</button></li>
+            <li><button>Color</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <div class="setting-box">
+          <div class="radio-wrap">
+            <label class="custom-radio mr-36">
+              <input type="radio" name="option" value="1" checked />
+              <span class="radio-mark"></span>
+              <span class="label">직접입력</span>
+            </label>
+            <label class="custom-radio mr-36">
+              <input type="radio" name="option" value="2" checked />
+              <span class="radio-mark"></span>
+              <span class="label">파일입력</span> </label
+            ><label class="custom-radio">
+              <input type="radio" name="option" value="3" />
+              <span class="radio-mark"></span>
+              <span class="label">파일입력(DB)</span>
+            </label>
+          </div>
+          <div class="flex space-between mt-24" style="width: 310px">
+            <div class="flex align-center">
+              <p class="w-64">Column</p>
+              <div class="custom-input-spinner">
+                <input type="number" class="custom-input" value="2" />
+                <div class="spinner-btn-wrap">
+                  <button type="button"></button>
+                  <button type="button"></button>
+                </div>
+              </div>
+            </div>
+            <div class="flex align-center">
+              <p class="w-40">Row</p>
+              <div class="custom-input-spinner">
+                <input type="number" class="custom-input" value="10" />
+                <div class="spinner-btn-wrap">
+                  <button type="button"></button>
+                  <button type="button"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="detail-wrap mt-34 pd-0">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Column 0</th>
+                  <th>Column 1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><button type="button" class="btn input-attr" aria-label=""></button></td>
+                  <td><button type="button" class="btn input-attr" aria-label=""></button></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="bottom-btn-wrap">
+          <button type="button" class="btn primary" aria-label="확인">확인</button>
+          <button type="button" class="btn" aria-label="취소">취소</button>
+          <button type="button" class="btn" aria-label="도움말">도움말</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
