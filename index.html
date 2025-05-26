@@ -39,7 +39,7 @@
           </tr>
           <tr>
             <td>1</td>
-            <td rowspan="100">컨트롤 속성창</td>
+            <td rowspan="31">컨트롤 속성창</td>
             <td>control-attr-1.html</td>
             <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-1.html')">Tab_컨트롤속성_일반</button></td>
             <td></td>
@@ -59,13 +59,13 @@
           <tr>
             <td>4</td>
             <td>control-attr-4.html</td>
-            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-4.html', 'type-2')">Lable_컨트롤속성_마스킹</button></td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-4.html', '800px, 745px')">Lable_컨트롤속성_마스킹</button></td>
             <td></td>
           </tr>
           <tr>
             <td>5</td>
             <td>control-attr-5.html</td>
-            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-5.html', 'type-2')">Lable_컨트롤속성_마스킹</button></td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-5.html', '800px, 745px')">Lable_컨트롤속성_마스킹</button></td>
             <td></td>
           </tr>
           <tr>
@@ -173,13 +173,13 @@
           <tr>
             <td>23</td>
             <td>control-attr-23.html</td>
-            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-23.html', 'type-3')">Table_컨트롤속성_일반</button></td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-23.html', '100vw, 100vh')">Table_컨트롤속성_일반</button></td>
             <td></td>
           </tr>
           <tr>
             <td>24</td>
             <td>control-attr-24.html</td>
-            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-24.html', 'type-3')">Table_컨트롤속성_마스킹 정보설정</button></td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-24.html', '100vw, 100vh')">Table_컨트롤속성_마스킹 정보설정</button></td>
             <td></td>
           </tr>
           <tr>
@@ -191,7 +191,7 @@
           <tr>
             <td>26</td>
             <td>control-attr-26.html</td>
-            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-26.html', 'type-4')">Graph_컨트롤속성_일반</button></td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-26.html', '1080px, 678px')">Graph_컨트롤속성_일반</button></td>
             <td></td>
           </tr>
           <tr>
@@ -224,6 +224,43 @@
             <td class="t-left"><button onclick="loadControlAttr('./pages/control-attr-31.html',)">MKMemory_컨트롤속성_메모리정보변경</button></td>
             <td></td>
           </tr>
+          <tr>
+            <td>32</td>
+            <td rowspan="100">설정창</td>
+            <td>setting-1.html</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/setting-1.html', '320px,450px')">login</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>33</td>
+            <td>setting-2.html</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/setting-2.html', '600px,544px')">setting</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>33</td>
+            <td>setting-3.html</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/setting-3.html', '600px,639px')">setting_screen</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>34</td>
+            <td>setting-4.html</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/setting-4.html', '600px,639px')">setting_screen02</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>35</td>
+            <td>setting-5.html</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/setting-5.html', '1200px,640px')">menu builder</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>36</td>
+            <td>setting-6.html</td>
+            <td class="t-left"><button onclick="loadControlAttr('./pages/setting-6.html', '1200px,712px')">menu builder02</button></td>
+            <td></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -243,12 +280,18 @@
         document.getElementById("pub-guide").src = page;
         document.querySelector(".pub-guide").style.display = "flex";
       }
-      function loadControlAttr(page, type) {
-        const modal = document.querySelector(".control-attr");
-        modal.classList.remove("type-2", "type-3", "type-4");
-        if (type) {
-          modal.classList.add(type);
+      function loadControlAttr(page, size) {
+        const modal = document.querySelector(".modal.control-attr");
+        const modalContent = modal.querySelector(".modal-content");
+        modalContent.style.width = "";
+        modalContent.style.height = "";
+
+        if (size) {
+          const [w, h] = size.split(",");
+          if (w) modalContent.style.width = w.trim();
+          if (h) modalContent.style.height = h.trim();
         }
+
         document.getElementById("control-attr").src = page;
         modal.style.display = "flex";
       }

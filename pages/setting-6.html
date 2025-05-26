@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menu builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="setting-wrap">
+      <div class="title-wrap">
+        <p>Menu builder</p>
+        <div>
+          <button type="button" class="btn minimun" aria-label="최소화"></button>
+          <button type="button" class="btn maximum ml-0" aria-label="최대화"></button>
+          <button type="button" class="btn close ml-0" aria-label="닫기"></button>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <div class="flex">
+          <div class="builder-sidebar">
+            <h4>프로젝트명</h4>
+            <div class="mt-12 flex">
+              <select id="select1" name="select1" class="custom-select dark w-126 mr-6">
+                <option value="1">Koscom_check</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <button type="button" class="btn dark mini outlined" aria-label="추가">추가</button>
+              <button type="button" class="btn dark mini outlined" aria-label="삭제">삭제</button>
+              <button type="button" class="btn dark mini outlined" aria-label="저장">저장</button>
+              <button type="button" class="btn dark mini outlined pd-0" aria-label="초기화">초기화</button>
+            </div>
+            <div class="menu-wrapper">
+              <ul class="menu-list type-2">
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">금융투자협회</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">종합</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">뉴스</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">관심</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">차트</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">주식</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">ETP</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">선물</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">옵션</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">채권</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">외환</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">해외</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">기업</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">경제금융</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">펀드</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">Lab</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">종가수신</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">시스템관리</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="text">숨김메뉴관리</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="builder-contents">
+            <div class="flex align-center">
+              <button type="button" class="btn dark mini outlined" aria-label="메뉴추가">메뉴추가</button>
+              <button type="button" class="btn dark mini outlined" aria-label="자식 메뉴 추가">자식 메뉴 추가</button>
+              <button type="button" class="btn dark mini outlined" aria-label="저장">저장</button>
+              <button type="button" class="btn dark mini outlined" aria-label="삭제">삭제</button>
+              <button type="button" class="btn dark mini outlined" aria-label="초기화">초기화</button>
+              <div class="ml-auto">
+                <label class="custom-checkbox dark" for="checkbox15" aria-label="">
+                  <input type="checkbox" id="checkbox15" name="checkbox15" /><i aria-hidden="true" class="lbl"></i>
+                  <span>권한보기</span>
+                </label>
+              </div>
+            </div>
+            <div class="builder-table-box type-2">
+              <table>
+                <thead>
+                  <colgroup>
+                    <col width="40px" />
+                    <col width="60px" />
+                    <col width="60px" />
+                    <col width="60px" />
+                    <col width="" />
+                    <col width="60px" />
+                    <col width="60px" />
+                    <col width="60px" />
+                    <col width="60px" />
+                    <col width="60px" />
+                    <col width="60px" />
+                    <col width="60px" />
+                  </colgroup>
+                  <tr>
+                    <th></th>
+                    <th>메뉴종류</th>
+                    <th>화면구분</th>
+                    <th>화면번호</th>
+                    <th>메뉴명</th>
+                    <th>기본형</th>
+                    <th>증권거래소</th>
+                    <th>코스닥증권</th>
+                    <th>증권업협회</th>
+                    <th>채권형</th>
+                    <th>채권고급형</th>
+                    <th>내부용</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="depth-1">
+                    <td>
+                      <span class="move-icon"></span>
+                    </td>
+                    <td class="t-left">P</td>
+                    <td class="t-left"></td>
+                    <td class="t-left"></td>
+                    <td class="t-left">채권관리화면</td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox1" aria-label="">
+                        <input type="checkbox" id="checkbox1" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox2" aria-label="">
+                        <input type="checkbox" id="checkbox2" name="checkbox2" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox3" aria-label="">
+                        <input type="checkbox" id="checkbox3" name="checkbox3" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox4" aria-label="">
+                        <input type="checkbox" id="checkbox4" name="checkbox4" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox5" aria-label="">
+                        <input type="checkbox" id="checkbox5" name="checkbox5" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox6" aria-label="">
+                        <input type="checkbox" id="checkbox6" name="checkbox6" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox7" aria-label="">
+                        <input type="checkbox" id="checkbox7" name="checkbox7" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="t-right">
+                      <span class="move-icon"></span>
+                    </td>
+                    <td class="t-left w-60">N</td>
+                    <td class="t-left">N</td>
+                    <td class="t-left">9803</td>
+                    <td class="t-left">일별종목 매매현황(장외)</td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox8" aria-label="">
+                        <input type="checkbox" id="checkbox8" name="checkbox8" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox9" aria-label="">
+                        <input type="checkbox" id="checkbox9" name="checkbox9" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox10" aria-label="">
+                        <input type="checkbox" id="checkbox10" name="checkbox10" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox11" aria-label="">
+                        <input type="checkbox" id="checkbox11" name="checkbox11" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox12" aria-label="">
+                        <input type="checkbox" id="checkbox12" name="checkbox12" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox13" aria-label="">
+                        <input type="checkbox" id="checkbox13" name="checkbox13" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox14" aria-label="">
+                        <input type="checkbox" id="checkbox14" name="checkbox14" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="t-right">
+                      <span class="move-icon"></span>
+                    </td>
+                    <td class="t-left w-60">N</td>
+                    <td class="t-left">N</td>
+                    <td class="t-left">9803</td>
+                    <td class="t-left">일별종목 매매현황(장외)</td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox15" aria-label="">
+                        <input type="checkbox" id="checkbox15" name="checkbox15" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox16" aria-label="">
+                        <input type="checkbox" id="checkbox16" name="checkbox16" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox17" aria-label="">
+                        <input type="checkbox" id="checkbox17" name="checkbox17" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox18" aria-label="">
+                        <input type="checkbox" id="checkbox18" name="checkbox18" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox19" aria-label="">
+                        <input type="checkbox" id="checkbox19" name="checkbox19" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox20" aria-label="">
+                        <input type="checkbox" id="checkbox20" name="checkbox20" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox21" aria-label="">
+                        <input type="checkbox" id="checkbox21" name="checkbox21" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="t-right">
+                      <span class="move-icon"></span>
+                    </td>
+                    <td class="t-left w-60">N</td>
+                    <td class="t-left">N</td>
+                    <td class="t-left">9803</td>
+                    <td class="t-left">일별종목 매매현황(장외)</td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox22" aria-label="">
+                        <input type="checkbox" id="checkbox22" name="checkbox22" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox23" aria-label="">
+                        <input type="checkbox" id="checkbox23" name="checkbox23" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox24" aria-label="">
+                        <input type="checkbox" id="checkbox24" name="checkbox24" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox25" aria-label="">
+                        <input type="checkbox" id="checkbox25" name="checkbox25" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox26" aria-label="">
+                        <input type="checkbox" id="checkbox26" name="checkbox26" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox27" aria-label="">
+                        <input type="checkbox" id="checkbox27" name="checkbox27" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox28" aria-label="">
+                        <input type="checkbox" id="checkbox28" name="checkbox28" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="t-right">
+                      <span class="move-icon"></span>
+                    </td>
+                    <td class="t-left w-60">N</td>
+                    <td class="t-left">N</td>
+                    <td class="t-left">9803</td>
+                    <td class="t-left">일별종목 매매현황(장외)</td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox29" aria-label="">
+                        <input type="checkbox" id="checkbox29" name="checkbox29" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox30" aria-label="">
+                        <input type="checkbox" id="checkbox30" name="checkbox30" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox31" aria-label="">
+                        <input type="checkbox" id="checkbox31" name="checkbox31" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox32" aria-label="">
+                        <input type="checkbox" id="checkbox32" name="checkbox32" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox33" aria-label="">
+                        <input type="checkbox" id="checkbox33" name="checkbox33" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox34" aria-label="">
+                        <input type="checkbox" id="checkbox34" name="checkbox34" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox35" aria-label="">
+                        <input type="checkbox" id="checkbox35" name="checkbox35" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="t-right">
+                      <span class="move-icon"></span>
+                    </td>
+                    <td class="t-left w-60">N</td>
+                    <td class="t-left">N</td>
+                    <td class="t-left">9803</td>
+                    <td class="t-left">일별종목 매매현황(장외)</td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox36" aria-label="">
+                        <input type="checkbox" id="checkbox36" name="checkbox36" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox37" aria-label="">
+                        <input type="checkbox" id="checkbox37" name="checkbox37" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox38" aria-label="">
+                        <input type="checkbox" id="checkbox38" name="checkbox38" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox39" aria-label="">
+                        <input type="checkbox" id="checkbox39" name="checkbox39" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox40" aria-label="">
+                        <input type="checkbox" id="checkbox40" name="checkbox40" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox41" aria-label="">
+                        <input type="checkbox" id="checkbox41" name="checkbox41" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox42" aria-label="">
+                        <input type="checkbox" id="checkbox42" name="checkbox42" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="t-right">
+                      <span class="move-icon"></span>
+                    </td>
+                    <td class="t-left w-60">N</td>
+                    <td class="t-left">N</td>
+                    <td class="t-left">9803</td>
+                    <td class="t-left">일별종목 매매현황(장외)</td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox43" aria-label="">
+                        <input type="checkbox" id="checkbox43" name="checkbox43" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox44" aria-label="">
+                        <input type="checkbox" id="checkbox44" name="checkbox44" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox45" aria-label="">
+                        <input type="checkbox" id="checkbox45" name="checkbox45" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox46" aria-label="">
+                        <input type="checkbox" id="checkbox46" name="checkbox46" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox47" aria-label="">
+                        <input type="checkbox" id="checkbox47" name="checkbox47" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox48" aria-label="">
+                        <input type="checkbox" id="checkbox48" name="checkbox48" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox49" aria-label="">
+                        <input type="checkbox" id="checkbox49" name="checkbox49" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="t-right">
+                      <span class="move-icon"></span>
+                    </td>
+                    <td class="t-left w-60">N</td>
+                    <td class="t-left">N</td>
+                    <td class="t-left">9803</td>
+                    <td class="t-left">일별종목 매매현황(장외)</td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox50" aria-label="">
+                        <input type="checkbox" id="checkbox50" name="checkbox50" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox51" aria-label="">
+                        <input type="checkbox" id="checkbox51" name="checkbox51" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox52" aria-label="">
+                        <input type="checkbox" id="checkbox52" name="checkbox52" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox53" aria-label="">
+                        <input type="checkbox" id="checkbox53" name="checkbox53" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox54" aria-label="">
+                        <input type="checkbox" id="checkbox54" name="checkbox54" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox55" aria-label="">
+                        <input type="checkbox" id="checkbox55" name="checkbox55" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox56" aria-label="">
+                        <input type="checkbox" id="checkbox56" name="checkbox56" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr class="depth-1">
+                    <td>
+                      <span class="move-icon"></span>
+                    </td>
+                    <td class="t-left">P</td>
+                    <td class="t-left"></td>
+                    <td class="t-left"></td>
+                    <td class="t-left">채권관리화면</td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox57" aria-label="">
+                        <input type="checkbox" id="checkbox57" name="checkbox57" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox58" aria-label="">
+                        <input type="checkbox" id="checkbox58" name="checkbox58" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox59" aria-label="">
+                        <input type="checkbox" id="checkbox59" name="checkbox59" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox60" aria-label="">
+                        <input type="checkbox" id="checkbox60" name="checkbox60" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox61" aria-label="">
+                        <input type="checkbox" id="checkbox61" name="checkbox61" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox62" aria-label="">
+                        <input type="checkbox" id="checkbox62" name="checkbox62" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                    <td>
+                      <label class="custom-checkbox dark" for="checkbox63" aria-label="">
+                        <input type="checkbox" id="checkbox63" name="checkbox63" /><i aria-hidden="true" class="lbl"></i>
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
