@@ -26,19 +26,19 @@
             <h4>Table</h4>
             <div class="flex align-center mt-18">
               <p class="w-115">Columns</p>
-              <input type="text" class="custom-input w-64" placeholder="5" />
+              <input type="number" class="custom-input w-64" placeholder="5" />
             </div>
             <div class="flex align-center mt-12">
               <p class="w-115">Rows</p>
-              <input type="text" class="custom-input w-64" placeholder="2" />
+              <input type="number" class="custom-input w-64" placeholder="2" />
             </div>
             <div class="flex align-center mt-12">
               <p class="w-115">Defcol width</p>
-              <input type="text" class="custom-input w-64" placeholder="90" />
+              <input type="number" class="custom-input w-64" placeholder="90" />
             </div>
             <div class="flex align-center mt-12">
               <p class="w-115">Defrow height</p>
-              <input type="text" class="custom-input w-64" placeholder="25" />
+              <input type="number" class="custom-input w-64" placeholder="25" />
             </div>
             <h4 class="mt-18">Data</h4>
             <div class="flex align-center mt-18">
@@ -79,15 +79,15 @@
             </div>
             <div class="flex align-center mt-26">
               <p class="w-115">Left</p>
-              <input type="text" class="custom-input w-64" placeholder="200" />
+              <input type="number" class="custom-input w-64" placeholder="200" />
             </div>
             <div class="flex align-center mt-26">
               <p class="w-115">Top</p>
-              <input type="text" class="custom-input w-64" placeholder="120" />
+              <input type="number" class="custom-input w-64" placeholder="120" />
             </div>
             <div class="flex align-center mt-26">
               <p class="w-115">Width</p>
-              <input type="text" class="custom-input w-64" placeholder="120" />
+              <input type="number" class="custom-input w-64" placeholder="120" />
             </div>
             <div class="flex align-center mt-26">
               <p class="w-115">Visible</p>
@@ -115,7 +115,7 @@
             </div>
             <div class="flex align-center mt-26">
               <p class="w-115">Anchor</p>
-              <input type="text" class="custom-input w-64" placeholder="120" />
+              <input type="number" class="custom-input w-64" placeholder="120" />
             </div>
             <div class="flex align-center mt-26">
               <p class="w-115">AppearenceStyle</p>
@@ -270,7 +270,7 @@
             <div class="flex mt-18">
               <div class="flex align-center mr-12">
                 <p class="w-118">Width</p>
-                <input type="text" class="custom-input w-64" placeholder="90" />
+                <input type="number" class="custom-input w-64" placeholder="90" />
                 <div class="radio-wrap unit-type ml-8">
                   <label class="custom-radio">
                     <input type="radio" name="option1" value="1" checked="" />
@@ -291,7 +291,7 @@
               </div>
               <div class="flex align-center">
                 <p class="w-118">Height</p>
-                <input type="text" class="custom-input w-64" placeholder="90" />
+                <input type="number" class="custom-input w-64" placeholder="90" />
                 <div class="radio-wrap unit-type ml-8">
                   <label class="custom-radio">
                     <input type="radio" name="option2" value="1" checked="" />
@@ -314,7 +314,7 @@
             <div class="flex mt-12">
               <div class="flex align-center mr-12">
                 <p class="w-118">MinW</p>
-                <input type="text" class="custom-input w-64" placeholder="90" />
+                <input type="number" class="custom-input w-64" placeholder="90" />
                 <div class="radio-wrap unit-type ml-8">
                   <label class="custom-radio">
                     <input type="radio" name="option3" value="1" checked="" />
@@ -335,7 +335,7 @@
               </div>
               <div class="flex align-center">
                 <p class="w-118">MinH</p>
-                <input type="text" class="custom-input w-64" placeholder="90" />
+                <input type="number" class="custom-input w-64" placeholder="90" />
                 <div class="radio-wrap unit-type ml-8">
                   <label class="custom-radio">
                     <input type="radio" name="option4" value="1" checked="" />
@@ -358,7 +358,7 @@
             <div class="flex mt-12">
               <div class="flex align-center mr-12">
                 <p class="w-118">MaxW</p>
-                <input type="text" class="custom-input w-64" placeholder="90" />
+                <input type="number" class="custom-input w-64" placeholder="90" />
                 <div class="radio-wrap unit-type ml-8">
                   <label class="custom-radio">
                     <input type="radio" name="option5" value="1" checked="" />
@@ -379,7 +379,7 @@
               </div>
               <div class="flex align-center">
                 <p class="w-118">MaxH</p>
-                <input type="text" class="custom-input w-64" placeholder="90" />
+                <input type="number" class="custom-input w-64" placeholder="90" />
                 <div class="radio-wrap unit-type ml-8">
                   <label class="custom-radio">
                     <input type="radio" name="option6" value="1" checked="" />
@@ -429,11 +429,11 @@
             <div class="flex mt-12">
               <div class="flex align-center mr-50" style="width: 218px">
                 <p class="w-118">Size</p>
-                <input type="text" class="custom-input w-64" placeholder="14" />
+                <input type="number" class="custom-input w-64" placeholder="14" />
               </div>
               <div class="flex align-center">
                 <p class="w-118">Height</p>
-                <input type="text" class="custom-input w-64" placeholder="0" />
+                <input type="number" class="custom-input w-64" placeholder="0" />
               </div>
             </div>
             <div class="flex mt-12">
@@ -470,6 +470,28 @@
                 </div>
               </div>
             </div>
+            <div class="flex mt-12">
+              <div class="flex align-center">
+                <p class="w-118">Hlign</p>
+                <div class="radio-wrap align-type align-center">
+                  <label class="custom-radio">
+                    <input type="radio" name="option4" value="1" checked="" />
+                    <span class="radio-mark txt-top-align"></span>
+                    <span class="label">왼쪽 정렬</span>
+                  </label>
+                  <label class="custom-radio">
+                    <input type="radio" name="option4" value="2" />
+                    <span class="radio-mark txt-middle-align"></span>
+                    <span class="label">가운데 정렬</span>
+                  </label>
+                  <label class="custom-radio">
+                    <input type="radio" name="option4" value="3" />
+                    <span class="radio-mark txt-bottom-align"></span>
+                    <span class="label">오른쪽 정렬</span>
+                  </label>
+                </div>
+              </div>
+            </div>
             <h4 class="mt-18">Background</h4>
             <div class="flex align-center mt-18">
               <p class="w-118">Color</p>
@@ -482,19 +504,92 @@
               <input type="text" class="custom-input w-100" placeholder="#fff" />
             </div>
             <h4 class="mt-18">Border</h4>
-            <div class="mt-26">
+            <div class="mt-26 flex">
               <div class="border-set-wrap">
                 <div></div>
+                <div>
+                  <label class="custom-checkbox border-line top" for="checkbox13" aria-label="border-top">
+                    <input type="checkbox" id="checkbox13" name="checkbox13" /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </div>
                 <div></div>
+                <div>
+                  <label class="custom-checkbox border-line left" for="checkbox16" aria-label="border-left">
+                    <input type="checkbox" id="checkbox16" name="checkbox16" /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </div>
+                <div>
+                  <label class="custom-checkbox border-line all" for="checkbox17" aria-label="border-all">
+                    <input type="checkbox" id="checkbox17" name="checkbox17" /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </div>
+                <div>
+                  <label class="custom-checkbox border-line right" for="checkbox14" aria-label="border-right">
+                    <input type="checkbox" id="checkbox14" name="checkbox14" /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </div>
                 <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+                  <label class="custom-checkbox border-line bottom" for="checkbox15" aria-label="border-bottom">
+                    <input type="checkbox" id="checkbox15" name="checkbox15" /><i aria-hidden="true" class="lbl"></i>
+                  </label>
+                </div>
                 <div></div>
               </div>
-              <div></div>
+              <div>
+                <div class="flex align-center">
+                  <p class="w-118">Style</p>
+                  <div class="radio-wrap border-select">
+                    <label class="custom-radio">
+                      <input type="radio" name="option6" value="1" checked />
+                      <span class="radio-mark border-select-none"></span>
+                    </label>
+                    <label class="custom-radio">
+                      <input type="radio" name="option6" value="2" />
+                      <span class="radio-mark border-select-line"></span>
+                    </label>
+                    <label class="custom-radio">
+                      <input type="radio" name="option6" value="3" />
+                      <span class="radio-mark border-select-dashed"></span>
+                    </label>
+                    <label class="custom-radio">
+                      <input type="radio" name="option6" value="4" />
+                      <span class="radio-mark border-select-dashed-2"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="flex align-center mt-15">
+                  <p class="w-118">Width</p>
+                  <input type="number" class="custom-input w-64" placeholder="1" />
+                </div>
+                <div class="flex align-center mt-12">
+                  <p class="w-118">Color</p>
+                  <input type="color" value="#ffffff" />
+                  <input type="text" class="custom-input w-100" placeholder="#fff" />
+                </div>
+                <div class="flex align-center mt-12">
+                  <p class="w-118">Header color</p>
+                  <input type="color" value="#ffffff" />
+                  <input type="text" class="custom-input w-100" placeholder="#fff" />
+                </div>
+              </div>
+            </div>
+            <div class="set-table-btn-wrp">
+              <div>
+                <div class="radio-wrap btn-type2">
+                  <label class="custom-radio">
+                    <input type="radio" name="option5" value="1" checked />
+                    <span class="radio-mark"></span>
+                    <span class="label">Cell Style</span>
+                  </label>
+                  <label class="custom-radio">
+                    <input type="radio" name="option5" value="2" />
+                    <span class="radio-mark"></span>
+                    <span class="label">Masking 정보설정</span>
+                  </label>
+                </div>
+              </div>
+              <button type="button" class="btn primary" aria-label="저장" onclick="parent.postMessage('close-modal', '*')">저장</button>
             </div>
           </div>
         </div>

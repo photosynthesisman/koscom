@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory_컨트롤속성_일반</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="control-attr-wrap">
+      <div class="side-bar">
+        <h3>Settings</h3>
+        <div class="menu-wrap">
+          <ul>
+            <li><button class="active">General</button></li>
+            <li><button>Memory Info</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <div class="setting-box">
+          <div class="custom-textfield">
+            <p class="legend">조회유형</p>
+            <div class="flex align-center">
+              <p class="w-97">Data Type</p>
+              <div class="mr-auto" style="width: 170px">
+                <select id="select6" name="select6" class="custom-select">
+                  <option value="1">3 - DB조회</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <p class="w-74">SubTR</p>
+              <input type="number" class="custom-input w-100" placeholder="0" />
+            </div>
+          </div>
+          <div class="custom-textfield mt-30">
+            <p class="legend">조회 데이터</p>
+            <div class="flex align-center">
+              <p class="w-97">Data Type</p>
+              <div class="mr-auto" style="width: 170px">
+                <select id="select1" name="select1" class="custom-select">
+                  <option value="1">2 - DELETE</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <p class="w-74">요청건수</p>
+              <input type="number" class="custom-input w-100" placeholder="0" />
+            </div>
+          </div>
+          <div class="custom-textfield mt-30">
+            <p class="legend">Real 데이터</p>
+            <div class="flex align-center">
+              <p class="w-97">Add Style</p>
+              <div style="width: 170px">
+                <select id="select2" name="select2" class="custom-select">
+                  <option value="1">0 - TOP Insert</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <div class="radio-wrap mt-18">
+              <label class="custom-radio mr-36">
+                <input type="radio" name="option" value="1" checked />
+                <span class="radio-mark"></span>
+                <span class="label fw-500">Key Update</span>
+              </label>
+              <input type="number" class="custom-input w-100 mr-16" placeholder="0" />
+              <label class="custom-radio">
+                <input type="radio" name="option" value="2" />
+                <span class="radio-mark"></span>
+                <span class="label fw-500">Row Update</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="custom-textfield mt-30">
+          <p class="legend">Intra Data</p>
+          <div class="flex align-center">
+            <p class="w-99">Intra Time</p>
+            <div class="custom-input-spinner">
+              <input type="number" class="custom-input" value="30" />
+              <div class="spinner-btn-wrap">
+                <button type="button"></button>
+                <button type="button"></button>
+              </div>
+            </div>
+          </div>
+          <div class="flex align-center mt-18">
+            <p class="w-134">Intra Time Feed</p>
+            <input type="number" class="custom-input w-100 mr-16" placeholder="0" />
+            <label class="custom-checkbox" for="checkbox2" aria-label="빈 데이터 소급">
+              <input type="checkbox" id="checkbox2" name="checkbox2" /><i aria-hidden="true" class="lbl"></i>
+              <span>빈 데이터 소급</span>
+            </label>
+          </div>
+        </div>
+        <div class="bottom-btn-wrap">
+          <button type="button" class="btn primary" aria-label="확인">확인</button>
+          <button type="button" class="btn" aria-label="취소">취소</button>
+          <button type="button" class="btn" aria-label="도움말">도움말</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

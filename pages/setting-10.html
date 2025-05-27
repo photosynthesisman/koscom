@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>도메인 관리</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="setting-wrap">
+      <div class="title-wrap">
+        <p>도메인 관리</p>
+        <div>
+          <button type="button" class="btn close ml-0" aria-label="닫기"></button>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="side-bar">
+          <div class="menu-wrap">
+            <ul>
+              <li><button>--Add Domain--</button></li>
+              <li><button>KB_AI</button></li>
+              <li><button>SI증권비대면</button></li>
+              <li><button>SI증권비대면계좌개설</button></li>
+              <li><button>기본도메인</button></li>
+              <li><button>챗봇테스트</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="contents-wrap bg-2">
+          <dl class="flex align-center">
+            <dt class="w-100">Screen ID</dt>
+            <dd class="w-full">
+              <input type="text" class="custom-input dark" placeholder="도메인 ID 지정(최대 4자리)" />
+            </dd>
+          </dl>
+          <dl class="flex align-center mt-16">
+            <dt class="w-100">도메인 이름</dt>
+            <dd class="w-full">
+              <input type="text" class="custom-input dark" placeholder="도메인 명칭(40바이트)" />
+            </dd>
+          </dl>
+          <dl class="flex align-center mt-16">
+            <dt class="w-100">도메인 설명</dt>
+            <dd class="w-full">
+              <input type="text" class="custom-input dark" placeholder="비고" />
+            </dd>
+          </dl>
+
+          <div class="bottom-btn-wrap">
+            <button type="button" class="btn dark primary" aria-label="Ok">Ok</button>
+            <button type="button" class="btn dark" aria-label="Cancel">Cancel</button>
+            <button type="button" class="btn dark outlined" aria-label="Delete">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

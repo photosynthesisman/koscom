@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graph_컨트롤속성_일반</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="control-attr-wrap">
+      <div class="side-bar">
+        <h3>Settings</h3>
+        <div class="menu-wrap">
+          <ul>
+            <li><button class="active">General</button></li>
+            <li><button>Color</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <div class="setting-box">
+          <div class="flex">
+            <div class="flex flex-column">
+              <div class="graph-wrap">
+                <div class="x-axis-box">
+                  <div class="x-axis">
+                    <span>20,000</span>
+                    <div class="x-line"></div>
+                  </div>
+                  <div class="x-axis">
+                    <span>15,000</span>
+                    <div class="x-line"></div>
+                  </div>
+                  <div class="x-axis">
+                    <span>10,000</span>
+                    <div class="x-line"></div>
+                  </div>
+                  <div class="x-axis">
+                    <span>5,000</span>
+                    <div class="x-line"></div>
+                  </div>
+                  <div class="x-axis">
+                    <span>0</span>
+                    <div class="x-line"></div>
+                  </div>
+                  <div class="x-axis">
+                    <span>-5,000</span>
+                    <div class="x-line"></div>
+                  </div>
+                </div>
+                <div class="y-axis-box">
+                  <div class="y-axis">
+                    <div class="y-line"><div class="bar-graph plus" style="height: 83px"></div></div>
+                    <span>기관</span>
+                  </div>
+                  <div class="y-axis">
+                    <div class="y-line"><div class="bar-graph plus" style="height: 110px"></div></div>
+                    <span>외인</span>
+                  </div>
+                  <div class="y-axis">
+                    <div class="y-line"><div class="bar-graph minus" style="height: 18px"></div></div>
+                    <span>기관</span>
+                  </div>
+                  <div class="y-axis">
+                    <div class="y-line"><div class="bar-graph plus" style="height: 20px"></div></div>
+                    <span>기관</span>
+                  </div>
+                  <div class="y-axis">
+                    <div class="y-line"><div class="bar-graph plus" style="height: 7px"></div></div>
+                    <span>기관</span>
+                  </div>
+                  <div class="y-axis">
+                    <div class="y-line"><div class="bar-graph plus" style="height: 7px"></div></div>
+                    <span>기관</span>
+                  </div>
+                  <div class="y-axis">
+                    <div class="y-line"><div class="bar-graph plus" style="height: 3px"></div></div>
+                    <span>기관</span>
+                  </div>
+                  <div class="y-axis">
+                    <div class="y-line"><div class="bar-graph plus" style="height: 3px"></div></div>
+                    <span>기관</span>
+                  </div>
+                  <div class="y-axis">
+                    <div class="y-line"><div class="bar-graph plus" style="height: 7px"></div></div>
+                    <span>기관</span>
+                  </div>
+                  <div class="y-axis">
+                    <div class="y-line"><div class="bar-graph plus"></div></div>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="graph-set-detail">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                Ipsum.
+              </div>
+            </div>
+            <div class="graph-attr">
+              <h4>Chart</h4>
+              <dl>
+                <dt>Height</dt>
+                <dd><input type="number" class="custom-input" value="300" /></dd>
+                <dt>Width</dt>
+                <dd><input type="number" class="custom-input" value="1000" /></dd>
+                <dt>Background</dt>
+                <dd><input type="text" class="custom-input" value="#111" /></dd>
+                <dt>Typo</dt>
+                <dd class="has-select">
+                  <select id="select1" name="select1" class="custom-select">
+                    <option value="1">False</option>
+                    <option value="2">True</option>
+                  </select>
+                </dd>
+                <dt>Typo</dt>
+                <dd class="has-select">
+                  <select id="select2" name="select2" class="custom-select">
+                    <option value="1">False</option>
+                    <option value="2">True</option>
+                  </select>
+                </dd>
+                <dt>Typo</dt>
+                <dd class="has-select">
+                  <select id="select3" name="select3" class="custom-select">
+                    <option value="1">True</option>
+                    <option value="2">False</option>
+                  </select>
+                </dd>
+                <dt>Background</dt>
+                <dd><input type="text" class="custom-input" value="bar" /></dd>
+                <dt>Ecom</dt>
+                <dd class="has-select">
+                  <select id="select4" name="select4" class="custom-select">
+                    <option value="1">False</option>
+                    <option value="2">True</option>
+                  </select>
+                </dd>
+                <dt>Ecom</dt>
+                <dd class="has-select">
+                  <select id="select5" name="select5" class="custom-select">
+                    <option value="1">False</option>
+                    <option value="2">True</option>
+                  </select>
+                </dd>
+                <dt>Ecom</dt>
+                <dd class="has-select">
+                  <select id="select6" name="select6" class="custom-select">
+                    <option value="1">X</option>
+                    <option value="2">Y</option>
+                  </select>
+                </dd>
+                <dt>Background</dt>
+                <dd><input type="number" class="custom-input" value="10" /></dd>
+              </dl>
+              <h4 class="mt-16">DataLabels</h4>
+              <dl>
+                <dt>Enabled</dt>
+                <dd class="has-select">
+                  <select id="select7" name="select7" class="custom-select">
+                    <option value="1">False</option>
+                    <option value="2">True</option>
+                  </select>
+                </dd>
+                <dt>StyleFontSize</dt>
+                <dd><input type="text" class="custom-input" value="14px" /></dd>
+                <dt>StyleFontWeight</dt>
+                <dd><input type="text" class="custom-input" value="Normal" /></dd>
+                <dt>StyleColors</dt>
+                <dd><input type="text" class="custom-input" value="[#fff]" /></dd>
+              </dl>
+              <h4 class="mt-14">Tooltip</h4>
+              <dl class="mt-14">
+                <dt>Enabled</dt>
+                <dd class="has-select">
+                  <select id="select8" name="select8" class="custom-select">
+                    <option value="1">False</option>
+                    <option value="2">True</option>
+                  </select>
+                </dd>
+                <dt>Background</dt>
+                <dd><input type="text" class="custom-input" value="dark" /></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-btn-wrap">
+          <button type="button" class="btn primary" aria-label="확인">확인</button>
+          <button type="button" class="btn" aria-label="취소">취소</button>
+          <button type="button" class="btn" aria-label="도움말">도움말</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Group Screen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="setting-wrap">
+      <div class="title-wrap">
+        <p>New Group Screen</p>
+        <button type="button" class="btn close" aria-label="닫기"></button>
+      </div>
+      <div class="contents-wrap">
+        <h4>Common setting</h4>
+        <div class="set-box">
+          <dl>
+            <dt>Size</dt>
+            <dd>
+              <div class="flex align-center space-between">
+                <button type="button" class="btn dark mini w-160 outlined" aria-label="Custom">Custom</button>
+                <p class="mr-10 ml-10">Width</p>
+                <input type="text" class="custom-input dark w-56" placeholder="320px" />
+                <p class="mr-10 ml-10">Height</p>
+                <input type="text" class="custom-input dark w-56" placeholder="320px" />
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>Domain</dt>
+            <dd>
+              <select id="select1" name="select1" class="custom-select dark">
+                <option value="1">기본도메인</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </dd>
+          </dl>
+          <dl>
+            <dt>Group</dt>
+            <dd>
+              <select id="select2" name="select2" class="custom-select dark">
+                <option value="1">기본그룹</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </dd>
+          </dl>
+          <dl>
+            <dt>Screen ID</dt>
+            <dd>
+              <select id="select3" name="select3" class="custom-select dark" disabled>
+                <option value="1">Input screen id</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </dd>
+          </dl>
+          <dl>
+            <dt>Screen Name</dt>
+            <dd>
+              <select id="select4" name="select4" class="custom-select dark" disabled>
+                <option value="1">Input screen name</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </dd>
+          </dl>
+        </div>
+        <h4 class="mt-16">Description</h4>
+        <div class="set-box ty-2">
+          <!-- 에디터 -->
+          <div class="text-editor">
+            <div class="editor-menue">
+              <div class="radio-wrap text-editor-type mr-auto">
+                <label class="custom-radio">
+                  <input type="radio" name="option6" value="1" checked />
+                  <span class="radio-mark font-style-bold"></span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="option6" value="2" />
+                  <span class="radio-mark font-style-italic"></span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="option6" value="3" />
+                  <span class="radio-mark font-style-underscore"></span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="option6" value="4" />
+                  <span class="radio-mark font-style-none"></span>
+                </label>
+              </div>
+              <div class="radio-wrap text-editor-type">
+                <div style="width: 113px">
+                  <select id="select5" name="select5" class="custom-select">
+                    <option value="1">12</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="radio-wrap text-editor-type">
+                <div class="custom-select align-type w-113">
+                  <ul>
+                    <li class="font-select ml-4"></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="radio-wrap text-editor-type">
+                <label class="custom-radio">
+                  <input type="radio" name="option7" value="1" checked />
+                  <span class="radio-mark bullet-type-1"></span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="option7" value="2" />
+                  <span class="radio-mark bullet-type-2"></span>
+                </label>
+                <div class="custom-select align-type">
+                  <ul>
+                    <li class="txt-left-align"></li>
+                    <li class="txt-center-align"></li>
+                    <li class="txt-right-align"></li>
+                    <li class="txt-justify-align"></li>
+                  </ul>
+                </div>
+              </div>
+              <button type="button" class="btn attached-file" aria-label="파일첨부"></button>
+            </div>
+            <div class="editor-contents"></div>
+          </div>
+        </div>
+        <div class="bottom-btn-wrap">
+          <div></div>
+          <div>
+            <button type="button" class="btn dark primary" aria-label="New">New</button>
+            <button type="button" class="btn dark" aria-label="Cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
