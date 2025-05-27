@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setting_screen_batch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="setting-wrap">
+      <div class="title-wrap">
+        <p>Screen Batch</p>
+        <div>
+          <button type="button" class="btn close ml-0" aria-label="닫기"></button>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <div class="flex space-between align-center">
+          <div class="flex">
+            <select id="select1" name="select1" class="custom-select dark w-100">
+              <option value="1">All</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <select id="select2" name="select2" class="custom-select dark w-140 ml-8">
+              <option value="1">All</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <button type="button" class="btn dark outlined mini" aria-label="Save Screen Batch">Save Screen Batch</button>
+        </div>
+        <div class="builder-table-box" style="height: 37px">
+          <table>
+            <colgroup>
+              <col width="40px" />
+              <col width="auto" />
+              <col width="auto" />
+              <col width="auto" />
+              <col width="auto" />
+              <col width="auto" />
+              <col width="auto" />
+              <col width="105px" />
+              <col width="auto" />
+              <col width="105px" />
+              <col width="auto" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <label class="custom-checkbox dark" for="checkbox1" aria-label="Read">
+                    <input type="checkbox" id="checkbox1" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </th>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Domain</th>
+                <th>Group</th>
+                <th>Modifier</th>
+                <th>Modifier date</th>
+                <th>Creator</th>
+                <th>Creator date</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="builder-table-box" style="height: 623px">
+          <table>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox2" aria-label="Read">
+                    <input type="checkbox" id="checkbox2" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox3" aria-label="Read">
+                    <input type="checkbox" id="checkbox3" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox4" aria-label="Read">
+                    <input type="checkbox" id="checkbox4" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox5" aria-label="Read">
+                    <input type="checkbox" id="checkbox5" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox6" aria-label="Read">
+                    <input type="checkbox" id="checkbox6" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox7" aria-label="Read">
+                    <input type="checkbox" id="checkbox7" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox8" aria-label="Read">
+                    <input type="checkbox" id="checkbox8" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox9" aria-label="Read">
+                    <input type="checkbox" id="checkbox9" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox10" aria-label="Read">
+                    <input type="checkbox" id="checkbox10" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox11" aria-label="Read">
+                    <input type="checkbox" id="checkbox11" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox12" aria-label="Read">
+                    <input type="checkbox" id="checkbox12" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox13" aria-label="Read">
+                    <input type="checkbox" id="checkbox13" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox14" aria-label="Read">
+                    <input type="checkbox" id="checkbox14" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox15" aria-label="Read">
+                    <input type="checkbox" id="checkbox15" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox16" aria-label="Read">
+                    <input type="checkbox" id="checkbox16" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox17" aria-label="Read">
+                    <input type="checkbox" id="checkbox17" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox18" aria-label="Read">
+                    <input type="checkbox" id="checkbox18" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox19" aria-label="Read">
+                    <input type="checkbox" id="checkbox19" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox20" aria-label="Read">
+                    <input type="checkbox" id="checkbox20" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox21" aria-label="Read">
+                    <input type="checkbox" id="checkbox21" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>
+                  <label class="custom-checkbox dark" for="checkbox22" aria-label="Read">
+                    <input type="checkbox" id="checkbox22" name="checkbox1" /><i aria-hidden="true" class="lbl"></i>
+                    <span>ScreenID</span>
+                  </label>
+                </td>
+                <td>30</td>
+                <td>kbai메인</td>
+                <td>KB_AI</td>
+                <td>KBAI</td>
+                <td>kjunho</td>
+                <td>2024-09-30 21:01</td>
+                <td>cjy</td>
+                <td>2024-09-11 08:48</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-16 fz-12">
+          ※if the screen you want to save is open, It may not be able to save property, so please exit all open screens before processing
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
