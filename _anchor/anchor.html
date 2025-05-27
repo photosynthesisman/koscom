@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Anchor Setting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- local 호출 수정-->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <style>
+    body { font-family: sans-serif; padding: 10px; margin: 0; font-size: 14px; }
+    .panel { max-width: 600px; margin: 0 auto; padding: 12px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+    .anchor-grid-box {
+      display: grid;
+      grid-template-areas: ". top ." "left . right" ". bottom .";
+      grid-template-columns: 1fr auto 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 8px;
+      justify-items: center;
+      align-items: center;
+      margin-bottom: 12px;
+      padding: 8px;
+      border: 1px solid #007bff;
+      border-radius: 6px;
+    }
+    .anchor-box {
+      background-color: #e6f0ff;
+      padding: 6px;
+      border-radius: 6px;
+      width: 100px;
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .anchor-label {
+      font-weight: bold;
+      color: #004080;
+      margin-bottom: 2px;
+      font-size: 12px;
+    }
+    .anchor-grid-box .top    { grid-area: top; }
+    .anchor-grid-box .bottom { grid-area: bottom; }
+    .anchor-grid-box .left   { grid-area: left; }
+    .anchor-grid-box .right  { grid-area: right; }
+    .anchor-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+    input[type="number"] {
+      width: 42px;
+      padding: 2px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    input[readonly] {
+      background-color: #f0f0f0;
+      color: #999;
+      cursor: default;
+    }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+    .layout-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 8px;
+      padding: 8px;
+      border: 1px dashed #007bff;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 12px;
+    }
+    .layout-row {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding: 4px 0;
+    }
+    .layout-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      padding: 4px;
+    }
+    .label-inline { font-weight: bold; margin-right: 4px; min-width: 28px; }
+    .readonly-button {
+      background-color: #f4f4f4;
+      border: 1px solid #aaa;
+      padding: 2px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      text-align: center;
+      min-width: 30px;
+    }
+    .readonly-button:hover {
+      background-color: #d0d0d0;
+    }
+    .mode-selector { margin-bottom: 8px; }
+    .switch-checkbox {
+      position: relative; display: inline-block; width: 42px; height: 20px;
+    }
+    .switch-checkbox input { opacity: 0; width: 0; height: 0; }
+    .slider {
+      position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc; transition: .4s; border-radius: 20px;
+    }
+    .slider:before {
+      position: absolute; content: ""; height: 14px; width: 14px;
+      left: 3px; bottom: 3px; background-color: white;
+      transition: .4s; border-radius: 50%;
+    }
+    .switch-checkbox input:checked + .slider { background-color: #4da3ff; }
+    .switch-checkbox input:checked + .slider:before { transform: translateX(20px); }
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: help;
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: max-content;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 4px;
+      padding: 4px 8px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+    .tooltip-icon {
+      display: inline-block;
+      margin-left: 4px;
+      font-size: 12px;
+      color: #007bff;
+      border-bottom: 1px dotted #007bff;
+    }
+    button {
+      padding: 6px 12px; font-size: 13px; border-radius: 4px;
+      border: none; cursor: pointer;
+    }
+    .btn-primary { background-color: #007bff; color: white; }
+    .btn-secondary { background-color: #ddd; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="panel">
+      <h2>Anchor Setting</h2>
+      <div class="mode-selector">
+        <label><input type="radio" v-model="mode" value="horizontal"> 가로형</label>
+        <label><input type="radio" v-model="mode" value="vertical"> 세로형</label>
+      </div>
+      <div class="anchor-grid-box">
+        <div class="anchor-box top">
+          <div class="anchor-label">Top <span class="tooltip"><span class="tooltip-icon">ⓘ</span><span class="tooltiptext">상단 여백 고정 설정</span></span></div>
+          <div class="anchor-controls">
+            <input type="checkbox" v-model="anchor.top.active">
+            <input type="number" v-model="anchor.top.value" v-if="lockRatio">
+          </div>
+        </div>
+        <div class="anchor-box left">
+          <div class="anchor-label">Left <span class="tooltip"><span class="tooltip-icon">ⓘ</span><span class="tooltiptext">좌측 여백 고정 설정</span></span></div>
+          <div class="anchor-controls">
+            <input type="checkbox" v-model="anchor.left.active">
+            <input type="number" v-model="anchor.left.value" v-if="lockRatio">
+          </div>
+        </div>
+        <div class="anchor-box right">
+          <div class="anchor-label">Right <span class="tooltip"><span class="tooltip-icon">ⓘ</span><span class="tooltiptext">우측 여백 고정 설정</span></span></div>
+          <div class="anchor-controls">
+            <input type="checkbox" v-model="anchor.right.active">
+            <input type="number" v-model="anchor.right.value" v-if="lockRatio">
+          </div>
+        </div>
+        <div class="anchor-box bottom">
+          <div class="anchor-label">Bottom <span class="tooltip"><span class="tooltip-icon">ⓘ</span><span class="tooltiptext">하단 여백 고정 설정</span></span></div>
+          <div class="anchor-controls">
+            <input type="checkbox" v-model="anchor.bottom.active">
+            <input type="number" v-model="anchor.bottom.value" v-if="lockRatio">
+          </div>
+        </div>
+      </div>
+      <div class="layout-grid" v-if="lockRatio">
+        <div v-if="mode === 'horizontal'">
+          <div class="layout-row"><span class="label-inline">2단</span>
+            <span class="readonly-button" @click="onStepClick('2단-1')">{{ step2[0] }}</span>
+            <span class="readonly-button" @click="onStepClick('2단-2')">{{ step2[1] }}</span>
+          </div>
+          <div class="layout-row"><span class="label-inline">3단</span>
+            <span class="readonly-button" @click="onStepClick('3단-1')">{{ step3[0] }}</span>
+            <span class="readonly-button" @click="onStepClick('3단-2')">{{ step3[1] }}</span>
+            <span class="readonly-button" @click="onStepClick('3단-3')">{{ step3[2] }}</span>
+          </div>
+          <div class="layout-row"><span class="label-inline">4단</span>
+            <span class="readonly-button" @click="onStepClick('4단-1')">{{ step4[0] }}</span>
+            <span class="readonly-button" @click="onStepClick('4단-2')">{{ step4[1] }}</span>
+            <span class="readonly-button" @click="onStepClick('4단-3')">{{ step4[2] }}</span>
+            <span class="readonly-button" @click="onStepClick('4단-4')">{{ step4[3] }}</span>
+          </div>
+        </div>
+        <div v-else class="layout-row">
+          <div class="layout-col"><span class="label-inline">2단</span>
+            <span class="readonly-button" @click="onStepClick('2단-1')">{{ step2[0] }}</span>
+            <span class="readonly-button" @click="onStepClick('2단-2')">{{ step2[1] }}</span>
+          </div>
+          <div class="layout-col"><span class="label-inline">3단</span>
+            <span class="readonly-button" @click="onStepClick('3단-1')">{{ step3[0] }}</span>
+            <span class="readonly-button" @click="onStepClick('3단-2')">{{ step3[1] }}</span>
+            <span class="readonly-button" @click="onStepClick('3단-3')">{{ step3[2] }}</span>
+          </div>
+          <div class="layout-col"><span class="label-inline">4단</span>
+            <span class="readonly-button" @click="onStepClick('4단-1')">{{ step4[0] }}</span>
+            <span class="readonly-button" @click="onStepClick('4단-2')">{{ step4[1] }}</span>
+            <span class="readonly-button" @click="onStepClick('4단-3')">{{ step4[2] }}</span>
+            <span class="readonly-button" @click="onStepClick('4단-4')">{{ step4[3] }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="toggle-box">
+        <span>고정모드 등비늘림 설정 <span class="tooltip"><span class="tooltip-icon">ⓘ</span><span class="tooltiptext">모든 방향 비율 동일하게 유지</span></span></span>
+        <label class="switch-checkbox">
+          <input type="checkbox" v-model="lockRatio">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div style="text-align: right;">
+        <button class="btn-primary" @click="onSave">저장</button>
+        <button class="btn-secondary" @click="onClose">닫기</button>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <strong>Anchor 문자열:</strong>
+        <div><code>{{ anchorInfo }}</code></div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    const { createApp, reactive, ref, computed } = Vue;
+  
+    createApp({
+      setup() {
+        // 📌 현재 선택된 모드: 'horizontal' 또는 'vertical'
+        const mode = ref("horizontal");
+  
+        // 📌 고정모드 등비율 설정 (true = 고정 비율, false = 수동)
+        const lockRatio = ref(true);
+  
+        // 📌 Anchor 설정값 (top, bottom, left, right)
+        // 각 항목은 active(체크 여부), value(입력값)
+        const anchor = reactive({
+          top: { active: true, value: 10 },
+          bottom: { active: true, value: 10 },
+          left: { active: true, value: 10 },
+          right: { active: true, value: 10 }
+        });
+  
+        // 📌 각 단계별 비율 값: 2단, 3단, 4단
+        const step2 = ref([50, 50]);
+        const step3 = ref([33, 33, 34]);
+        const step4 = ref([25, 25, 25, 25]);
+  
+        // 📌 버튼 클릭 이벤트: asis  소스로직 추가
+        const onStepClick = (label) => {
+          console.log(`[클릭] ${label}`);
+
+          const mode = (mode.value === "horizontal") ? true : false;
+          
+          
+        };
+  
+        const anchorInfo = computed(() => {
+            const activeParts = [];
+            const rateParts = [];
+
+            // ✅ 체크된 방향만 직렬화에 포함
+            if (anchor.top.active) {
+                activeParts.push("Top");
+                if (anchor.top.value > 0 && anchor.top.value < 100)
+                rateParts.push(`TopRate=${anchor.top.value}`);
+            }
+            if (anchor.left.active) {
+                activeParts.push("Left");
+                if (anchor.left.value > 0 && anchor.left.value < 100)
+                rateParts.push(`LeftRate=${anchor.left.value}`);
+            }
+            if (anchor.right.active) {
+                activeParts.push("Right");
+                if (anchor.right.value > 0 && anchor.right.value < 100)
+                rateParts.push(`RightRate=${anchor.right.value}`);
+            }
+            if (anchor.bottom.active) {
+                activeParts.push("Bottom");
+                if (anchor.bottom.value > 0 && anchor.bottom.value < 100)
+                rateParts.push(`BottomRate=${anchor.bottom.value}`);
+            }
+
+            const anchorStr = activeParts.length ? activeParts.join(",") : "None";
+            return rateParts.length ? `${anchorStr}#${rateParts.join(",")}` : anchorStr;   
+        });
+
+        const parseAnchorInfo = (infoStr) => {
+            const [parts, rates] = infoStr.split("#");
+            const dirs = parts.split(",");
+            ["top", "bottom", "left", "right"].forEach(dir => {
+                anchor[dir].active = dirs.includes(cap(dir));
+            });
+
+            if (rates) {
+            rates.split(",").forEach(r => {
+                const [k, v] = r.split("=");
+                if (k && v) {
+                if (k === "TopRate") anchor.top.value = parseInt(v);
+                if (k === "BottomRate") anchor.bottom.value = parseInt(v);
+                if (k === "LeftRate") anchor.left.value = parseInt(v);
+                if (k === "RightRate") anchor.right.value = parseInt(v);
+                }
+            });
+            }
+        };
+
+        const cap = (dir) => dir.charAt(0).toUpperCase() + dir.slice(1);
+
+
+        // 📌 저장 버튼 클릭 시 모든 상태를 콘솔에 출력
+        const onSave = () => {
+          alert("저장되었습니다!");
+          console.log("JSON:", JSON.stringify(anchor));
+
+          console.log("AnchorInfo:", anchorInfo.value);
+        };
+  
+        // 📌 닫기 버튼 클릭 시 단순 알림
+        const onClose = () => {
+          alert("종료됨");
+        };
+  
+        // 📌 템플릿에서 사용할 변수/함수 반환
+        return {
+          mode,
+          lockRatio,
+          anchor,
+          step2,
+          step3,
+          step4,
+          anchorInfo,
+          onSave,
+          onClose,
+          onStepClick
+        };
+      }
+    }).mount("#app"); // 👉 id="app"인 요소에 Vue 앱 마운트
+  </script>
+  </body>
+</html>
