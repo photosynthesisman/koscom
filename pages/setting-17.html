@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User system</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="setting-wrap">
+      <div class="title-wrap">
+        <p>User system</p>
+        <div>
+          <button type="button" class="btn close ml-0" aria-label="닫기"></button>
+        </div>
+      </div>
+
+      <div class="contents-wrap">
+        <div class="upper-btn-box">
+          <div class="flex">
+            <button type="button" class="btn script-edit save" aria-label=""></button>
+            <button type="button" class="btn script-edit hide" aria-label=""></button>
+          </div>
+          <div class="flex">
+            <button type="button" class="btn script-edit image" aria-label=""></button>
+            <button type="button" class="btn script-edit function" aria-label=""></button>
+          </div>
+        </div>
+        <div class="flex" style="height: calc(100% - 32px)">
+          <div class="control-attr-box">
+            <div class="control-attr-list">
+              <select id="select1" name="select1" class="custom-select dark">
+                <option value="1">Form</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <div class="flex space-between mt-12">
+                <label class="custom-checkbox dark" for="checkbox1" aria-label="method">
+                  <input type="checkbox" id="checkbox1" name="checkbox1" checked="" /><i aria-hidden="true" class="lbl"></i>
+                  <span>method</span>
+                </label>
+                <label class="custom-checkbox dark" for="checkbox2" aria-label="event">
+                  <input type="checkbox" id="checkbox2" name="checkbox2" checked="" /><i aria-hidden="true" class="lbl"></i>
+                  <span>event</span>
+                </label>
+                <label class="custom-checkbox dark" for="checkbox3" aria-label="property">
+                  <input type="checkbox" id="checkbox3" name="checkbox3" checked="" /><i aria-hidden="true" class="lbl"></i>
+                  <span>property</span>
+                </label>
+              </div>
+              <ul>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+                <li><span class="bullet"></span>Formgoogle</li>
+              </ul>
+            </div>
+            <button class="toggle-list" type="button"></button>
+          </div>
+          <div class="script-edit-wrap">
+            <div class="lower-btn-box"><button type="button" class="btn script-edit split" aria-label=""></button></div>
+            <div class="script-edit-box"></div>
+            <div class="script-edit-box"></div>
+          </div>
+        </div>
+      </div>
+      <!-- image-list -->
+      <div class="imgae-list">
+        <div class="image-wrap">
+          <div class="image-box">
+            <button type="button" class="btn script-edit ty-2 w-32" aria-label=""></button>
+            <p class="number">1</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit ty-2 icon2" aria-label=""></button>
+            <p class="number">2</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon3" aria-label=""></button>
+            <p class="number">3</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon6" aria-label=""></button>
+            <p class="number">6</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon7" aria-label=""></button>
+            <p class="number">7</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon8" aria-label=""></button>
+            <p class="number">8</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon9" aria-label=""></button>
+            <p class="number">9</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon10" aria-label=""></button>
+            <p class="number">10</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon11" aria-label=""></button>
+            <p class="number">11</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon12" aria-label=""></button>
+            <p class="number">12</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon13" aria-label=""></button>
+            <p class="number">13</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon14" aria-label=""></button>
+            <p class="number">14</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon16" aria-label=""></button>
+            <p class="number">16</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon17" aria-label=""></button>
+            <p class="number">17</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon18" aria-label=""></button>
+            <p class="number">18</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon19" aria-label=""></button>
+            <p class="number">19</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon20" aria-label=""></button>
+            <p class="number">20</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon21" aria-label=""></button>
+            <p class="number">21</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon22" aria-label=""></button>
+            <p class="number">22</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon23" aria-label=""></button>
+            <p class="number">23</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon24" aria-label=""></button>
+            <p class="number">24</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon25" aria-label=""></button>
+            <p class="number">25</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon27" aria-label=""></button>
+            <p class="number">27</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon28" aria-label=""></button>
+            <p class="number">28</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon30" aria-label=""></button>
+            <p class="number">30</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon58" aria-label=""></button>
+            <p class="number">58</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon60" aria-label=""></button>
+            <p class="number">60</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon61 w-52" aria-label=""></button>
+            <p class="number">61</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit" aria-label=""></button>
+            <p class="number">62</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit" aria-label=""></button>
+            <p class="number">65</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon107" aria-label=""></button>
+            <p class="number">107</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon108" aria-label=""></button>
+            <p class="number">108</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon109 ty-3" aria-label=""></button>
+            <p class="number">109</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit" aria-label=""></button>
+            <p class="number">110</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit ty-2 icon111" aria-label=""></button>
+            <p class="number">111</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit" aria-label=""></button>
+            <p class="number">112</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon113" aria-label=""></button>
+            <p class="number">113</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon114" aria-label=""></button>
+            <p class="number">114</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon115" aria-label=""></button>
+            <p class="number">115</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon116" aria-label=""></button>
+            <p class="number">116</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon117" aria-label=""></button>
+            <p class="number">117</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit" aria-label=""></button>
+            <p class="number">118</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit" aria-label=""></button>
+            <p class="number">119</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon120 w-32 ty-4" aria-label=""></button>
+            <p class="number">120</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon121 w-32 ty-5" aria-label=""></button>
+            <p class="number">121</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon122" aria-label=""></button>
+            <p class="number">122</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon123 ty-6" aria-label=""></button>
+            <p class="number">123</p>
+          </div>
+          <div class="image-box">
+            <button type="button" class="btn script-edit icon124" aria-label=""></button>
+            <p class="number">124</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelector(".script-edit.image").addEventListener("click", function (event) {
+        event.stopPropagation();
+        const imgList = document.querySelector(".imgae-list");
+        imgList.style.display = "block";
+
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+        imgList.style.position = "absolute";
+        imgList.style.top = mouseY + scrollTop - 20 + "px";
+        imgList.style.left = mouseX + scrollLeft - imgList.offsetWidth + "px";
+        imgList.style.zIndex = 1000;
+      });
+      document.addEventListener("click", function (event) {
+        const imgList = document.querySelector(".imgae-list");
+        if (!imgList.contains(event.target) && !event.target.closest("table.custom-table")) {
+          imgList.style.display = "none";
+        }
+      });
+      document.querySelector(".toggle-list").addEventListener("click", function () {
+        if (this.classList.contains("open")) {
+          document.querySelector(".control-attr-list").style.width = "220px";
+          this.classList.remove("open");
+        } else {
+          document.querySelector(".control-attr-list").style.width = "0";
+          this.classList.add("open");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -248,3 +248,18 @@
   font-weight: $weight;
   line-height: $lineHeight;
 }
+
+// 스크롤바 공통 스타일 믹스인
+@mixin custom-scrollbar($track: var(--border-color-4), $thumb: var(--dark-bg-color-7), $width: 8px) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+  &::-webkit-scrollbar-track {
+    background: $track;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+}
