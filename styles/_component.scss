@@ -1759,6 +1759,14 @@ input[type="color"] {
       flex-grow: 1;
     }
   }
+  &.type-3 {
+    height: 215px;
+    margin-top: 0;
+    border: 1px solid var(--border-color-4);
+    .menu-header {
+      border-bottom-color: var(--border-color-5);
+    }
+  }
 }
 .builder-contents {
   width: 100%;
@@ -2139,5 +2147,16 @@ input[type="color"] {
         color: var(--white-bg-color);
       }
     }
+  }
+}
+.tab-order-setbox {
+  &:first-child {
+    width: 250px;
+    flex-shrink: 0;
+  }
+  &:last-child {
+    min-width: 276px;
+    margin-left: 25px;
+    flex: 1 0 0;
   }
 }

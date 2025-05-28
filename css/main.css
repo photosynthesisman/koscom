@@ -13671,6 +13671,14 @@ input[type=color]::-webkit-color-swatch {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.menu-wrapper.type-3 {
+  height: 215px;
+  margin-top: 0;
+  border: 1px solid var(--border-color-4);
+}
+.menu-wrapper.type-3 .menu-header {
+  border-bottom-color: var(--border-color-5);
+}
 
 .builder-contents {
   width: 100%;
@@ -14057,4 +14065,17 @@ input[type=color]::-webkit-color-swatch {
   padding: 5px;
   background-color: var(--border-color-4);
   color: var(--white-bg-color);
+}
+
+.tab-order-setbox:first-child {
+  width: 250px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.tab-order-setbox:last-child {
+  min-width: 276px;
+  margin-left: 25px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
 }/*# sourceMappingURL=main.css.map */

@@ -19,26 +19,68 @@
       </div>
       <div class="contents-wrap">
         <div class="flex">
-          <div class="w-50p">
+          <div class="tab-order-setbox">
             <h4>Form Tree</h4>
             <div class="set-box ty-2">
               <div class="form-Tree-wrap">
                 <ul class="depth-1">
                   <li>
-                    Form
+                    <button>Form</button>
                     <ul class="depth-2">
-                      <li>medit_1</li>
+                      <li><button>medit_1</button></li>
                       <li>
-                        <span class="focused">edit_1</span>
+                        <button class="focused">edit_1</button>
                       </li>
                     </ul>
                   </li>
-                  <li>Form2</li>
+                  <li><button>Form2</button></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="w-50p"></div>
+          <div class="tab-order-setbox">
+            <div class="menu-wrapper type-3">
+              <div class="menu-header">Tab Order</div>
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="number">1</span>
+                  <span class="text">POC</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="number">2</span>
+                  <span class="text">데모화면</span>
+                </li>
+              </ul>
+            </div>
+            <div class="flex justify-center mg-15y">
+              <button type="button" class="btn dark move-item up" aria-label="위로 올기기"></button>
+              <button type="button" class="btn dark move-item down ml-8" aria-label="아래로 내리기"></button>
+            </div>
+            <div class="menu-wrapper type-3">
+              <div class="menu-header">메뉴그룹</div>
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="number">1</span>
+                  <span class="text">POC</span>
+                </li>
+                <li class="menu-item">
+                  <span class="move-icon"></span>
+                  <span class="number">2</span>
+                  <span class="text">데모화면</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bottom-btn-wrap">
+              <div></div>
+              <div>
+                <button type="button" class="btn dark primary" aria-label="OK">OK</button>
+                <button type="button" class="btn dark" aria-label="Cancel">Cancel</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
