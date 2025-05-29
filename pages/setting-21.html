@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="setting-wrap">
+      <div class="title-wrap">
+        <p>Start page</p>
+        <div>
+          <button type="button" class="btn close ml-0" aria-label="닫기"></button>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <div class="bg-box"><button type="button" class="btn dark outlined" aria-label="Setting">Setting</button></div>
+        <h2 class="notice-title">Notice</h2>
+        <div class="notice-search-box">
+          <div>
+            <button class="notice-classify active">ALL</button>
+            <button class="notice-classify">Notice</button>
+            <button class="notice-classify">Tech</button>
+            <button class="notice-classify">Screen</button>
+            <button class="notice-classify">Library</button>
+            <button class="notice-classify">Operation</button>
+          </div>
+          <div class="search-container w-160">
+            <input type="search" class="custom-search-input" placeholder="Search" />
+            <button class="search-icon"></button>
+          </div>
+        </div>
+        <div class="builder-table-box mt-16" style="height: 37px">
+          <table>
+            <colgroup>
+              <col width="40px" />
+              <col width="40px" />
+              <col width="100px" />
+              <col width="auto" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th>
+                <th class="color-gray">ID</th>
+                <th>Category</th>
+                <th>Title</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="builder-table-box" style="height: 399px">
+          <table>
+            <colgroup>
+              <col width="40px" />
+              <col width="40px" />
+              <col width="100px" />
+              <col width="auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <td class="color-gray">1</td>
+                <td class="color-gray">4</td>
+                <td>Notice</td>
+                <td>Acherostudio공지사항</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

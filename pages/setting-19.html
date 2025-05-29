@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git설정디렉토리</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./../css/main.css" />
+  </head>
+  <body>
+    <div class="setting-wrap">
+      <div class="title-wrap">
+        <p>User System</p>
+        <div>
+          <button type="button" class="btn close ml-0" aria-label="닫기"></button>
+        </div>
+      </div>
+      <div class="contents-wrap">
+        <p class="mb-10 color-gray fz-12 fw-500">GitLab 연동 툴 - D:/gitlab/koscom_screen</p>
+        <div class="flex" style="height: calc(100% - 20px)">
+          <div class="control-attr-box mt-15">
+            <div class="control-attr-list flex flex-column">
+              <button type="button" class="btn dark outlined" aria-label="폴더선택">폴더선택</button>
+              <button type="button" class="btn dark outlined mt-12 ml-0" aria-label="Git pull">Git pull</button>
+              <button type="button" class="btn dark outlined mt-12 ml-0" aria-label="Git committ">Git committ</button>
+              <button type="button" class="btn dark outlined mt-12 ml-0" aria-label="Git push">Git push</button>
+              <button type="button" class="btn dark outlined mt-12 ml-0" aria-label="diff 보기">diff 보기</button>
+            </div>
+          </div>
+          <div class="script-edit-wrap type-3">
+            <div class="flex">
+              <div class="flex flex-column w-full h-full">
+                <h3 class="edit-tit">Original(Git기준)</h3>
+                <div class="script-edit-box"></div>
+              </div>
+              <div class="flex flex-column w-full h-full ml-17">
+                <h3 class="edit-tit">Modified(Local file)</h3>
+                <div class="script-edit-box"></div>
+              </div>
+            </div>
+            <div class="script-edit-box mt-16" style="height: 375px">
+              <p>Git로그가 여기에 표시됩니다.</p>
+              <br />
+              <p>[[12시 32분 18초]] git pull...</p>
+              <br />
+              <p>[[12시 32분 26초]] from gitlab.com</p>
+              <br />
+              <p>[[12시 32분 26초]] Already up to date</p>
+              <br />
+              <p>[[12시 32분 26초]] From gitlab.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
