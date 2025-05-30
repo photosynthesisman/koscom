@@ -1031,18 +1031,6 @@ input[type="search"]::-webkit-search-cancel-button {
   box-sizing: border-box;
   resize: none;
   transition: border-color 0.3s;
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-  &::-webkit-scrollbar-track {
-    background: var(--white-bg-color);
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--sub-bg-color);
-    border-radius: 15px;
-    cursor: pointer;
-  }
-
   &:focus {
     border-color: #007bff;
     outline: none;
@@ -1051,7 +1039,6 @@ input[type="search"]::-webkit-search-cancel-button {
     background: var(--dark-bg-color-6);
     border: 1px solid var(--border-color-4);
     color: var(--white-bg-color);
-    @include custom-scrollbar();
   }
 }
 .custom-textfield {
@@ -1208,6 +1195,20 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 //layout
 .control-attr-wrap {
+  * {
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: var(--white-bg-color);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--sub-bg-color);
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  }
   display: flex;
   .side-bar {
     width: 204px;
@@ -1264,7 +1265,7 @@ input[type="search"]::-webkit-search-cancel-button {
     background-color: var(--sub-bg-color-2);
     border: 1px solid var(--border-color);
     overflow-y: auto;
-    @include custom-scrollbar();
+
     .thumbnail-wrap {
       display: flex;
       gap: 6px;
@@ -1335,7 +1336,7 @@ input[type="search"]::-webkit-search-cancel-button {
   border: 1px solid var(--border-color);
   box-sizing: border-box;
   overflow-y: auto;
-  @include custom-scrollbar();
+
   .custom-table {
     th {
       font-size: 10px;
@@ -1617,6 +1618,20 @@ input[type="color"] {
 // set layout
 .setting-wrap {
   color: var(--white-bg-color);
+  * {
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: var(--border-color-4);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--dark-bg-color-7);
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  }
   p {
     line-height: 10px;
   }
@@ -1765,7 +1780,7 @@ input[type="color"] {
     overflow-y: auto;
     flex-grow: 1;
     background-color: var(--dark-bg-color-4);
-    @include custom-scrollbar();
+
     &::after {
       content: "";
       z-index: 0;
@@ -1909,7 +1924,7 @@ input[type="color"] {
       }
     }
   }
-  @include custom-scrollbar();
+
   & + .builder-table-box {
     margin-top: 0;
   }
@@ -2135,7 +2150,7 @@ input[type="color"] {
   list-style: none;
   padding: 0;
   margin: 0;
-  @include custom-scrollbar();
+
   li {
     display: flex;
     align-items: center;
@@ -2265,7 +2280,7 @@ input[type="color"] {
     margin-top: 12px;
     border: 1px solid var(--border-color-4);
     overflow-y: auto;
-    @include custom-scrollbar();
+
     li {
       height: 30px;
       padding: 0 12px;
@@ -2342,7 +2357,6 @@ input[type="color"] {
     line-height: 28px;
     color: var(--disabled-txt-color);
     overflow-y: auto;
-    @include custom-scrollbar();
   }
   .edit-tit {
     margin-bottom: 24px;
@@ -2363,7 +2377,7 @@ input[type="color"] {
   background: var(--dark-bg-color-4);
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
   overflow-y: auto;
-  @include custom-scrollbar();
+
   .image-wrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2463,3 +2477,12 @@ input[type="color"] {
     }
   }
 }
+// input 항목들에 굴림 폰트 적용
+input,
+.custom-select {
+  font-family: "Gulim", "굴림", Arial, sans-serif;
+}
+// 숫자 인풋에 특정 포커스 예시
+// input[type="number"] {
+// border: 1px solid var(--primary-color);
+// }

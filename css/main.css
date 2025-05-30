@@ -12818,17 +12818,6 @@ input[type=search]::-webkit-search-cancel-button {
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s;
 }
-.custom-textarea::-webkit-scrollbar {
-  width: 8px;
-}
-.custom-textarea::-webkit-scrollbar-track {
-  background: var(--white-bg-color);
-}
-.custom-textarea::-webkit-scrollbar-thumb {
-  background-color: var(--sub-bg-color);
-  border-radius: 15px;
-  cursor: pointer;
-}
 .custom-textarea:focus {
   border-color: #007bff;
   outline: none;
@@ -12837,17 +12826,6 @@ input[type=search]::-webkit-search-cancel-button {
   background: var(--dark-bg-color-6);
   border: 1px solid var(--border-color-4);
   color: var(--white-bg-color);
-}
-.custom-textarea.dark::-webkit-scrollbar {
-  width: 8px;
-}
-.custom-textarea.dark::-webkit-scrollbar-track {
-  background: var(--border-color-4);
-}
-.custom-textarea.dark::-webkit-scrollbar-thumb {
-  background-color: var(--dark-bg-color-7);
-  border-radius: 15px;
-  cursor: pointer;
 }
 
 .custom-textfield {
@@ -13015,6 +12993,18 @@ input[type=search]::-webkit-search-cancel-button {
   display: -ms-flexbox;
   display: flex;
 }
+.control-attr-wrap *::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.control-attr-wrap *::-webkit-scrollbar-track {
+  background: var(--white-bg-color);
+}
+.control-attr-wrap *::-webkit-scrollbar-thumb {
+  background-color: var(--sub-bg-color);
+  border-radius: 15px;
+  cursor: pointer;
+}
 .control-attr-wrap .side-bar {
   width: 204px;
   height: 100vh;
@@ -13072,17 +13062,6 @@ input[type=search]::-webkit-search-cancel-button {
   background-color: var(--sub-bg-color-2);
   border: 1px solid var(--border-color);
   overflow-y: auto;
-}
-.control-attr-wrap .detail-wrap::-webkit-scrollbar {
-  width: 8px;
-}
-.control-attr-wrap .detail-wrap::-webkit-scrollbar-track {
-  background: var(--border-color-4);
-}
-.control-attr-wrap .detail-wrap::-webkit-scrollbar-thumb {
-  background-color: var(--dark-bg-color-7);
-  border-radius: 15px;
-  cursor: pointer;
 }
 .control-attr-wrap .detail-wrap .thumbnail-wrap {
   display: -webkit-box;
@@ -13183,17 +13162,6 @@ input[type=search]::-webkit-search-cancel-button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-y: auto;
-}
-.set-detail-wrap::-webkit-scrollbar {
-  width: 8px;
-}
-.set-detail-wrap::-webkit-scrollbar-track {
-  background: var(--border-color-4);
-}
-.set-detail-wrap::-webkit-scrollbar-thumb {
-  background-color: var(--dark-bg-color-7);
-  border-radius: 15px;
-  cursor: pointer;
 }
 .set-detail-wrap .custom-table th {
   font-size: 10px;
@@ -13544,6 +13512,18 @@ input[type=color]::-webkit-color-swatch {
 .setting-wrap {
   color: var(--white-bg-color);
 }
+.setting-wrap *::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.setting-wrap *::-webkit-scrollbar-track {
+  background: var(--border-color-4);
+}
+.setting-wrap *::-webkit-scrollbar-thumb {
+  background-color: var(--dark-bg-color-7);
+  border-radius: 15px;
+  cursor: pointer;
+}
 .setting-wrap p {
   line-height: 10px;
 }
@@ -13727,17 +13707,6 @@ input[type=color]::-webkit-color-swatch {
           flex-grow: 1;
   background-color: var(--dark-bg-color-4);
 }
-.menu-wrapper .menu-list::-webkit-scrollbar {
-  width: 8px;
-}
-.menu-wrapper .menu-list::-webkit-scrollbar-track {
-  background: var(--border-color-4);
-}
-.menu-wrapper .menu-list::-webkit-scrollbar-thumb {
-  background-color: var(--dark-bg-color-7);
-  border-radius: 15px;
-  cursor: pointer;
-}
 .menu-wrapper .menu-list::after {
   content: "";
   z-index: 0;
@@ -13887,17 +13856,6 @@ input[type=color]::-webkit-color-swatch {
 }
 .builder-table-box.header-fixed.has-line th {
   padding: 10px 0 3px;
-}
-.builder-table-box::-webkit-scrollbar {
-  width: 8px;
-}
-.builder-table-box::-webkit-scrollbar-track {
-  background: var(--border-color-4);
-}
-.builder-table-box::-webkit-scrollbar-thumb {
-  background-color: var(--dark-bg-color-7);
-  border-radius: 15px;
-  cursor: pointer;
 }
 .builder-table-box + .builder-table-box {
   margin-top: 0;
@@ -14114,17 +14072,6 @@ input[type=color]::-webkit-color-swatch {
   padding: 0;
   margin: 0;
 }
-.filtered-list::-webkit-scrollbar {
-  width: 8px;
-}
-.filtered-list::-webkit-scrollbar-track {
-  background: var(--border-color-4);
-}
-.filtered-list::-webkit-scrollbar-thumb {
-  background-color: var(--dark-bg-color-7);
-  border-radius: 15px;
-  cursor: pointer;
-}
 .filtered-list li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14284,17 +14231,6 @@ input[type=color]::-webkit-color-swatch {
   border: 1px solid var(--border-color-4);
   overflow-y: auto;
 }
-.control-attr-box ul::-webkit-scrollbar {
-  width: 8px;
-}
-.control-attr-box ul::-webkit-scrollbar-track {
-  background: var(--border-color-4);
-}
-.control-attr-box ul::-webkit-scrollbar-thumb {
-  background-color: var(--dark-bg-color-7);
-  border-radius: 15px;
-  cursor: pointer;
-}
 .control-attr-box ul li {
   height: 30px;
   padding: 0 12px;
@@ -14378,17 +14314,6 @@ input[type=color]::-webkit-color-swatch {
   color: var(--disabled-txt-color);
   overflow-y: auto;
 }
-.script-edit-wrap .script-edit-box::-webkit-scrollbar {
-  width: 8px;
-}
-.script-edit-wrap .script-edit-box::-webkit-scrollbar-track {
-  background: var(--border-color-4);
-}
-.script-edit-wrap .script-edit-box::-webkit-scrollbar-thumb {
-  background-color: var(--dark-bg-color-7);
-  border-radius: 15px;
-  cursor: pointer;
-}
 .script-edit-wrap .edit-tit {
   margin-bottom: 24px;
   font-weight: 500;
@@ -14409,17 +14334,6 @@ input[type=color]::-webkit-color-swatch {
   -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
   overflow-y: auto;
-}
-.imgae-list::-webkit-scrollbar {
-  width: 8px;
-}
-.imgae-list::-webkit-scrollbar-track {
-  background: var(--border-color-4);
-}
-.imgae-list::-webkit-scrollbar-thumb {
-  background-color: var(--dark-bg-color-7);
-  border-radius: 15px;
-  cursor: pointer;
 }
 .imgae-list .image-wrap {
   display: grid;
@@ -14548,4 +14462,9 @@ input[type=color]::-webkit-color-swatch {
   width: 1px;
   height: 100%;
   background-color: var(--dark-bg-color-5);
+}
+
+input,
+.custom-select {
+  font-family: "Gulim", "굴림", Arial, sans-serif;
 }/*# sourceMappingURL=main.css.map */
